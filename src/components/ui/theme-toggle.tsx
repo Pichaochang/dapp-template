@@ -2,9 +2,8 @@
 
 import * as React from 'react';
 
-import { Laptop, MoonStar, Sun } from 'lucide-react';
+import { SunMoon, MoonStar, Sun } from 'lucide-react';
 
-import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -15,29 +14,30 @@ import {
 import { useTheme } from '../../providers/theme';
 
 export default function ThemeToggle() {
-  const { setTheme } = useTheme();
+  const { setTheme, theme } = useTheme();
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button data-testid='theme-toggle' variant='outline' size='icon'>
+      {/* <Sun className='h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0' />
+      <MoonStar className='absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100' /> */}
+        {/* <Button data-testid='theme-toggle' variant='outline' size='icon'>
           <Sun className='h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0' />
           <MoonStar className='absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100' />
           <span className='sr-only'>Toggle theme</span>
-        </Button>
+        </Button> */}
+        {
+          theme === 'dark' ?  <SunMoon className='mr-4'/> : <Sun className='mr-4'/>
+        }
       </DropdownMenuTrigger>
       <DropdownMenuContent data-testid='theme-dropdown-content' align='end'>
         <DropdownMenuItem data-testid='theme-light' onClick={() => setTheme('light')}>
-          <Sun className='mr-2 h-[1.2rem] w-[1.2rem]' />
+          <Sun className='mr-2 h-5 w-5' />
           Light
         </DropdownMenuItem>
         <DropdownMenuItem data-testid='theme-dark' onClick={() => setTheme('dark')}>
-          <MoonStar className='mr-2 h-[1.2rem] w-[1.2rem]' />
+          <MoonStar className='mr-2 h-5 w-5' />
           Dark
-        </DropdownMenuItem>
-        <DropdownMenuItem data-testid='theme-system' onClick={() => setTheme('system')}>
-          <Laptop className='mr-2 h-[1.2rem] w-[1.2rem]' />
-          System
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

@@ -18,9 +18,8 @@ function App() {
   const { toast } = useToast()
 
   return (
-    <>
+    <div className='bg-[#f4f4f4] dark:bg-[#0f0f0f] min-h-screen p-3'>
       {element}
-      
       <Button className='text-[#000] dark:text-[#fff]' onClick={() => {
         console.log('useToast', useToast)
         toast({
@@ -30,7 +29,7 @@ function App() {
       }}>test
       </Button>
       <Toaster></Toaster>
-    </>
+    </div>
   );
 }
 
