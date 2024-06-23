@@ -7,7 +7,7 @@ import React from 'react';
 import Navbar from './components/navbar';
 
 import routes from './router';
-import {useRoutes} from 'react-router-dom';
+import { useRoutes } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
 
@@ -16,11 +16,11 @@ function App() {
 
   return (
     <>
-    <Navbar />
-            {element}
-          <Button onClick={() => {
-
-          }}></Button></>
+      <Navbar />
+      {element}
+      <Button className='text-[#000] dark:text-[#fff]' onClick={() => {}}>test
+      </Button>
+    </>
   );
 }
 
