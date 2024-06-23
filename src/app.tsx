@@ -8,14 +8,23 @@ import {StoresProvider, stores} from './store';
 // import GithubCorner from './components/github-corner';
 import Navbar from './components/navbar';
 import RootProvider from './providers/root';
+import routes from './router';
+import {useRoutes, useNavigate, useLocation} from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+
 
 function App() {
+  const element = useRoutes(routes);
+
   return (
     <BrowserRouter>
       <RootProvider>
         <StoresProvider value={stores}>
           <Navbar />
-          das
+          {element}
+          <Button onClick={() => {
+            
+          }}></Button>
           {/* <main className='flex h-full flex-col items-center justify-center'>
             <GithubCorner
               title='Get started on GitHub'

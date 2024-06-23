@@ -1,6 +1,6 @@
 import React from 'react';
 import {observer} from 'mobx-react-lite';
-import './index.less';
+// import './index.sass';
 
 const About = () => {
   // const {globalStore} = useStores();
