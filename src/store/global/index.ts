@@ -5,21 +5,6 @@ import {fetchPokemon} from '../../api';
 import i18n from '../../react-i18next-config';
 // import {Picker} from 'antd-mobile';
 // constaddressType = `0x${string}` | null
-interface userInfoDTO {
-  id?: number;
-  address?: string;
-  leaderAddress?: string;
-  level?: number;
-  promoteUSDTAmout?: number;
-  btgmBlance?: number;
-  usdtBlance?: number;
-  createTime?: string;
-  updateTime?: string;
-  dufBalance?: 0n;
-  userInvitationAmount?: 0n;
-  bigAreaAmount?: 0n;
-  smallAreaAmount?: 0n;
-}
 class Global {
   constructor() {
     // makeAutoObservable: 自动将所有属性和方法转换为可观察对象。

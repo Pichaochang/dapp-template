@@ -13,7 +13,7 @@ function App() {
   return (
     <BrowserRouter>
       <RootProvider>
-        <StoresProvider value={undefined}>
+        <StoresProvider value={stores}>
           <Navbar />
           das
           {/* <main className='flex h-full flex-col items-center justify-center'>
