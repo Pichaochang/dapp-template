@@ -4,10 +4,25 @@
  */
 import React from 'react';
 // import SuspenseLazy from '@/components/SuspenseLazy';
-import {RouteObject, Navigate} from 'react-router-dom';
+import {RouteObject, Navigate, Outlet} from 'react-router-dom';
 // import PrivateRoute from './PrivateRoute';
 // import Home from '@/view/Home';
-import About from '../view/About/index';
+import DashBoard from '../view/DashBoard/index';
+import Stake from '@/view/stake/index';
+import Bond from '@/view/bond/index';
+import ClaimProfit from '@/view/claimProfit/index';
+import WinReward from '@/view/winReward/index';
+import DaoReward from '@/view/daoReward/index';
+import IdoReward from '@/view/idoReward/index';
+import Boadroom from '@/view/boadroom/index';
+
+import Navbar from '../components/navbar';
+
+
+
+
+
+
 
 // import Introduce from '@/view/Home/Introduce';
 // import IntroduceTwo from '@/view/Home/IntroduceTwo';
@@ -22,61 +37,53 @@ import About from '../view/About/index';
 const routes: RouteObject[] = [
   {
     path: '/',
-    element: <Navigate to='/' /> // 重定向
+    element: <Navigate to='/DashBoard' /> // 重定向
   },
-
   {
     path: '/',
     element: (
       <>
-       <About />
+      <Navbar />
+      <Outlet></Outlet>
         {/* <PrivateRoute>
           <Home />
         </PrivateRoute> */}
       </>
     ),
     children: [
-      // 嵌套路由
-      // {
-      //   path: 'introduce',
-      //   element: <Introduce></Introduce>
-      // },
-      // {
-      //   path: 'IntroduceTwo',
-      //   element: <IntroduceTwo></IntroduceTwo>
-      // },
-      // {
-      //   path: 'IntroduceThree',
-      //   element: <IntroduceThree></IntroduceThree>
-      // },
-      // {
-      //   path: 'mint',
-      //   element: Mint
-      // },
-      // {
-      //   path: 'mint2',
-      //   element: Mint
-      // }
-      // {
-      //   path: 'swap',
-      //   element: Swap
-      // },
-      // {
-      //   path: 'mintedDUF',
-      //   element: MintedDUF
-      // },
-      // {
-      //   path: 'myIncome',
-      //   element: MyIncome
-      // },
-      // {
-      //   path: 'teamIncome',
-      //   element: TeamIncome
-      // },
-      // {
-      //   path: 'burnFC',
-      //   element: BurnFC
-      // }
+      {
+        path: 'DashBoard',
+        element: <DashBoard></DashBoard>
+      },
+      {
+        path: 'Stake',
+        element: <Stake></Stake>
+      },
+      {
+        path: 'Bond',
+        element: <Bond></Bond>
+      },
+      {
+        path: 'ClaimProfit',
+        element: <ClaimProfit></ClaimProfit>
+      },
+      {
+        path: 'Stake',
+        element: <WinReward></WinReward>
+      },
+      {
+        path: 'DaoReward',
+        element: <DaoReward></DaoReward>
+      },
+      {
+        path: 'IdoReward',
+        element: <IdoReward></IdoReward>
+      },
+      {
+        path: 'Boadroom',
+        element: <Boadroom></Boadroom>
+      },
+      
     ]
   },
   {
