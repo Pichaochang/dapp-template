@@ -22,7 +22,7 @@ import About from '../view/About/index';
 const routes: RouteObject[] = [
   {
     path: '/',
-    element: <Navigate to='/introduce' /> // 重定向
+    element: <Navigate to='/' /> // 重定向
   },
 
   {
