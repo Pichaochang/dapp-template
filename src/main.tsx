@@ -3,7 +3,7 @@ import './styles/global.css';
 import { BrowserRouter } from 'react-router-dom';
 import RootProvider from './providers/root';
 import React from 'react';
-
+import './react-i18next-config'
 import { createRoot } from 'react-dom/client';
 import 'virtual:svg-icons-register'
 

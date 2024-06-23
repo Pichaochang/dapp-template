@@ -27,7 +27,7 @@ export default function ThemeToggle() {
           <span className='sr-only'>Toggle theme</span>
         </Button> */}
         {
-          theme === 'dark' ?  <SunMoon className='mr-4'/> : <Sun className='mr-4'/>
+          theme === 'dark' ?  <SunMoon className='h-4 w-4 mr-4'/> : <Sun className='h-4 w-4 mr-4'/>
         }
       </DropdownMenuTrigger>
       <DropdownMenuContent data-testid='theme-dropdown-content' align='end'>
