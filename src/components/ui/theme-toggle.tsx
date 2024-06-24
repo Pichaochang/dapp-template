@@ -10,8 +10,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
-
-import { useTheme } from '../../providers/theme';
+import lightIcon from '@/assets/common/light/light.png'
+import darkIcon from '@/assets/common/dark/light.png'
+import { useTheme } from '@/providers/theme';
 
 export default function ThemeToggle() {
   const { setTheme, theme } = useTheme();
@@ -19,16 +20,7 @@ export default function ThemeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-      {/* <Sun className='h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0' />
-      <MoonStar className='absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100' /> */}
-        {/* <Button data-testid='theme-toggle' variant='outline' size='icon'>
-          <Sun className='h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0' />
-          <MoonStar className='absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100' />
-          <span className='sr-only'>Toggle theme</span>
-        </Button> */}
-        {
-          theme === 'dark' ?  <SunMoon className='h-4 w-4 mr-4'/> : <Sun className='h-4 w-4 mr-4'/>
-        }
+      <img className='h-6 w-6 mr-4' src={theme === 'dark' ? darkIcon : lightIcon} alt="" />  
       </DropdownMenuTrigger>
       <DropdownMenuContent data-testid='theme-dropdown-content' align='end'>
         <DropdownMenuItem data-testid='theme-light' onClick={() => setTheme('light')}>

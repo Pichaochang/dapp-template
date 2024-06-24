@@ -1,9 +1,6 @@
 'use client';
 
 import * as React from 'react';
-
-import { SunMoon, MoonStar, Sun } from 'lucide-react';
-
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -23,7 +20,7 @@ export default function LanguageToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <img className='h-4 w-4 mr-4' src={theme === 'dark' ? darkLanguageIcon : languageIcon} alt="" />  
+        <img className='h-6 w-6 mr-4' src={theme === 'dark' ? darkLanguageIcon : languageIcon} alt="" />  
       </DropdownMenuTrigger>
       <DropdownMenuContent className='mt-2' data-testid='theme-dropdown-content' align='end'>
         <DropdownMenuItem data-testid='theme-light' onClick={() => changeLanguage('en')}>
