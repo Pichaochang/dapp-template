@@ -8,7 +8,16 @@ const resources = {
   'zh-TW': {
     translation: tw
   },
-  'en-US': {
+  'en': {
+    translation: en
+  },
+  'de': {
+    translation: en
+  },
+  'ja': {
+    translation: en
+  },
+  'ko': {
     translation: en
   }
 };
@@ -19,9 +28,9 @@ i18n
   .init({
     resources,
     // 默认语言  zh/en  中文/英文
-    lng: 'en-US',
-    fallbackLng: 'zh-TW',
-    preload: ['en-US', 'zh-TW'],
+    lng: 'en',
+    fallbackLng: 'en',
+    preload: ['en', 'zh-TW'],
     interpolation: {
       escapeValue: false
     },

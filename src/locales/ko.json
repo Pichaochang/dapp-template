@@ -1,0 +1,14 @@
+{
+  "header": {
+    "wallet": "지갑",
+    "Dashboard": "계기반",
+    "Stake": "말뚝",
+    "Bond": "노예",
+    "ClaimProfit": "청구 이익",
+    "WINReward": "보상을 받으십시오",
+    "DAOReward": "다오 보상",
+    "IDORelease": "IDO 릴리스",
+    "Boardroom": "회의실"
+  },
+  "global": { "Boardroom": "회의실" }
+}

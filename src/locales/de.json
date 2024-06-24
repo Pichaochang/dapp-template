@@ -1,0 +1,14 @@
+{
+  "header": {
+    "wallet": "Geldbörse",
+    "Dashboard": "Armaturenbrett",
+    "Stake": "Einsatz",
+    "Bond": "Bindung",
+    "ClaimProfit": "Gewinn fordern",
+    "WINReward": "Gewinnen Sie Belohnung",
+    "DAOReward": "Dao Belohnung",
+    "IDORelease": "IDO -Veröffentlichung",
+    "Boardroom": "Sitzungssaal"
+  },
+  "global": { "Boardroom": "Sitzungssaal" }
+}

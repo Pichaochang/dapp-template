@@ -1,0 +1,14 @@
+{
+  "header": {
+    "wallet": "財布",
+    "Dashboard": "ダッシュボード",
+    "Stake": "ステーク",
+    "Bond": "つなぐ",
+    "ClaimProfit": "利益を主張します",
+    "WINReward": "報酬を獲得します",
+    "DAOReward": "DAO報酬",
+    "IDORelease": "IDOリリース",
+    "Boardroom": "会議室"
+  },
+  "global": { "Boardroom": "会議室" }
+}

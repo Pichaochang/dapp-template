@@ -8,7 +8,7 @@ export default defineConfig({
     host: '127.0.0.1',
     port: 7890
   },
-  fromLang: Lang['zh-CN'],
+  fromLang: Lang['en'],
   fromPath: 'translate.entry.json',
   translate: [
     {
@@ -21,6 +21,18 @@ export default defineConfig({
         {
           targetLang: Lang.en,
           outPath: './src/locales/en.json'
+        },
+        {
+          targetLang: Lang.de,
+          outPath: './src/locales/de.json'
+        },
+        {
+          targetLang: Lang.ja,
+          outPath: './src/locales/ja.json'
+        },
+        {
+          targetLang: Lang.ko,
+          outPath: './src/locales/ko.json'
         }
       ]
     }
