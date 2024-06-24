@@ -1,6 +1,14 @@
 {
   "header": {
-    "wallet": "Wallet"
+    "wallet": "Wallet",
+    "Dashboard": "Dashboard",
+    "Stake": "Stake",
+    "Bond": "Bond",
+    "ClaimProfit": "Claim Profit",
+    "WINReward": "WIN Reward",
+    "DAOReward": "DAO Reward",
+    "IDORelease": "IDO Release",
+    "Boardroom": "Boardroom"
   },
   "global": {
 
