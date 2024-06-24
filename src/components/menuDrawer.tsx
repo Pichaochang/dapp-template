@@ -56,49 +56,49 @@ export function MenuDrawer() {
           <DropdownMenuItem onClick={() => handleClickLink('/')}>
             <div className="flex items-center mb-1">
               <img className="h-5 w-5 mr-2" src={theme === 'light' ? dashboardIcon : darkDashboardIcon} alt="" />
-              <span>{t('Dashboard')}</span>
+              <span>{t('header.Dashboard')}</span>
             </div>
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => handleClickLink('/Stake')}>
             <div className="flex items-center mb-1">
               <img className="h-5 w-5 mr-2" src={theme === 'light' ? stakeIcon : darkStakeIcon} alt="" />
-              <span>{t('Stake')}</span>
+              <span>{t('header.Stake')}</span>
             </div>
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => handleClickLink('/Bond')}>
             <div className="flex items-center mb-1">
               <img className="h-5 w-5 mr-2" src={theme === 'light' ? bondIcon : darkBondIcon} alt="" />
-              <span>{t('Bond')}</span>
+              <span>{t('header.Bond')}</span>
             </div>
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => handleClickLink('/ClaimProfit')}>
             <div className="flex items-center mb-1">
               <img className="h-5 w-5 mr-2" src={theme === 'light' ? claimIcon : darkClaimIcon} alt="" />
-              <span>{t('ClaimProfit')}</span>
+              <span>{t('header.ClaimProfit')}</span>
             </div>
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => handleClickLink('/Stake')}>
             <div className="flex items-center mb-1">
               <img className="h-5 w-5 mr-2" src={theme === 'light' ? winRewardIcon : darkWinRewardIcon} alt="" />
-              <span>{t('WINReward')}</span>
+              <span>{t('header.WINReward')}</span>
             </div>
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => handleClickLink('/DaoReward')}>
             <div className="flex items-center mb-1">
               <img className="h-5 w-5 mr-2" src={theme === 'light' ? daoRewardIcon : darkDaoRewardIcon} alt="" />
-              <span>{t('DAOReward')}</span>
+              <span>{t('header.DAOReward')}</span>
             </div>
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => handleClickLink('/IdoReward')}>
             <div className="flex items-center mb-1">
               <img className="h-5 w-5 mr-2" src={theme === 'light' ? idoRewardIcon : darkIdoRewardIcon} alt="" />
-              <span>{t('IDORelease')}</span>
+              <span>{t('header.IDORelease')}</span>
             </div>
           </DropdownMenuItem>
           <DropdownMenuItem onClick={() => handleClickLink('/Boadroom')}>
             <div className="flex items-center mb-1">
               <img className="h-5 w-5 mr-2" src={theme === 'light' ?  boardroomIcon: darkBoardroomIcon} alt="" />
-              <span>{t('Boardroom')}</span>
+              <span>{t('header.Boardroom')}</span>
             </div>
           </DropdownMenuItem>
         </DropdownMenuGroup>
