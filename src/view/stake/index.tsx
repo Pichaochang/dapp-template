@@ -39,7 +39,7 @@ const Stake = () => {
         </div>
 
         <div className='text-center'>
-          <Button>{t('stake.Approve')}</Button>
+          <Button size='my' variant="my">{t('stake.Approve')}</Button>
         </div>
         
 
