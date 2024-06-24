@@ -31,7 +31,8 @@ import darkIdoRewardIcon from '@/assets/common/dark/idoReward.png'
 import darkBoardroomIcon from '@/assets/common/dark/boardroom.png'
 import { useTheme } from "@/providers/theme";
 import { useNavigate } from "react-router-dom";
-
+import menuIcon from '@/assets/common/light/menu.png'
+import darkMenuIcon from '@/assets/common/dark/menu.png'
 export function MenuDrawer() {
   const { t } = useTranslation();
   const { theme } = useTheme();
@@ -43,7 +44,7 @@ export function MenuDrawer() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Menu className='h-4 w-4' />
+        <img className='h-6 w-6' src={theme === 'dark' ? darkMenuIcon : menuIcon} alt="" />  
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-48 ml-2">
         <DropdownMenuLabel onClick={() => handleClickLink('/')}>

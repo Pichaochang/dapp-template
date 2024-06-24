@@ -2,18 +2,15 @@ import React from 'react';
 
 import ThemeToggle from './ui/theme-toggle';
 import LanguageToggle from './ui/language-toggle';
-import { Menu, Globe, Wallet } from 'lucide-react';
-import { useTheme } from '@/providers/theme';
+import { Wallet } from 'lucide-react';
 import {useTranslation} from 'react-i18next';
 import {MenuDrawer} from '@/components/menuDrawer';
 
 
 export default function Navbar() {
   const {t} = useTranslation();
-  // const { theme } = useTheme();
   return (
     <header className='flex h-16 w-full items-center justify-between'>
-      {/* {theme} */}
       <div className=''>
         <MenuDrawer></MenuDrawer>
       </div>
