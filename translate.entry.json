@@ -29,7 +29,10 @@
     "CurrentIndex": "Current Index",
     "title": "First time staking PEX? ",
     "title2": "Please approve PHOENIX to use your PEX",
-    "Approve": "Approve"
+    "StakeList": "Stake List",
+    "Approve": "Approve",
+    "noStake": "No stake date is avaiable"
+    
   },
   "global": {
     "Boardroom": "Boardroom"
