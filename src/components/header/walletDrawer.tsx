@@ -8,9 +8,6 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-
-import favicon from '@/assets/common//favicon.png'
-
 import dashboardIcon from '@/assets/common/light/dashboard.png'
 import stakeIcon from '@/assets/common/light/stake.png'
 import bondIcon from '@/assets/common/light/bond.png'
@@ -30,27 +27,32 @@ import darkIdoRewardIcon from '@/assets/common/dark/idoReward.png'
 import darkBoardroomIcon from '@/assets/common/dark/boardroom.png'
 import { useTheme } from "@/providers/theme";
 import { useNavigate } from "react-router-dom";
-import menuIcon from '@/assets/common/light/menu.png'
-import darkMenuIcon from '@/assets/common/dark/menu.png'
-export function MenuDrawer() {
+import walletIcon from '@/assets/common/light/wallet.png'
+import darkWalletIcon from '@/assets/common/dark/wallet.png'
+import { useState } from "react";
+export default function WalletDrawer() {
   const { t } = useTranslation();
   const { theme } = useTheme();
   const navigate = useNavigate();
   const handleClickLink = (link: string) => {
     navigate(link);
   };
+  const [open, setOpen] = useState(false);
 
   return (
-    <DropdownMenu>
+    <DropdownMenu open={open} onOpenChange={setOpen}>
       <DropdownMenuTrigger asChild>
-        <img className='h-6 w-6' src={theme === 'dark' ? darkMenuIcon : menuIcon} alt="" />  
+      <div onClick={() => setOpen(false)} className='flex items-center mr-4 py-1 px-2 rounded-3xl' style={{background: 'linear-gradient(90deg, #AA3EFF 0%, #B40DB9 100%)'}}>
+        <img onClick={() => setOpen(true)} className='h-4 w-4 mr-2' src={theme === 'dark' ?  darkWalletIcon : walletIcon } alt="" />  
+        <span className='text-white text-xs'>{t('header.wallet')}</span>
+      </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-48 ml-2">
         <DropdownMenuLabel onClick={() => handleClickLink('/')}>
-          <div className="w-full flex flex-col items-center justify-center">
+          {/* <div className="w-full flex flex-col items-center justify-center">
             <img className="h-16 w-16 m-2" src={favicon} alt="" />
             <div className="m-1">PHOENIX</div>
-          </div>
+          </div> */}
         </DropdownMenuLabel>
         <DropdownMenuGroup>
           <DropdownMenuItem onClick={() => handleClickLink('/')}>
