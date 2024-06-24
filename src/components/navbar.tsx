@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ThemeToggle from './ui/theme-toggle';
+import LanguageToggle from './ui/language-toggle';
 import { Menu, Globe, Wallet } from 'lucide-react';
 import { useTheme } from '@/providers/theme';
 import {useTranslation} from 'react-i18next';
@@ -22,7 +23,7 @@ export default function Navbar() {
           <span className='text-white text-xs'>{t('header.wallet')}</span>
         </div>
         <ThemeToggle/>
-        <Globe className='h-4 w-4'/>
+        <LanguageToggle/>
       </div>
       
     </header>
