@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 
-import { SunMoon, MoonStar, Sun } from 'lucide-react';
+import { MoonStar, Sun } from 'lucide-react';
 
 import {
   DropdownMenu,
