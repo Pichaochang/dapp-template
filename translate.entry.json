@@ -21,7 +21,15 @@
     "TotalMintin": "Total Minting Quantity Of PEX",
     "winPrice": "WIN Price",
     "title1": "Risk Free Value Of Treasury 1 Assets"
-
+  },
+  "stake": {
+    "SingleStake": "Single Stake (3,3)",
+    "APY": "APY",
+    "TotalDeposited": "Total Deposited",
+    "CurrentIndex": "Current Index",
+    "title": "First time staking PEX? ",
+    "title2": "Please approve PHOENIX to use your PEX",
+    "Approve": "Approve"
   },
   "global": {
     "Boardroom": "Boardroom"
