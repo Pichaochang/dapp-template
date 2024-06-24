@@ -7,7 +7,7 @@ const About = () => {
   // const {count, name} = globalStore;
   return (
     <div className='about-root'>
-      <p>Hello About</p>
+      <p>stake</p>
     </div>
   );
 };

@@ -3,11 +3,12 @@
  * https://reactrouter.com/en/v6.3.0/getting-started/installation
  */
 import React from 'react';
-// import SuspenseLazy from '@/components/SuspenseLazy';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import SuspenseLazy from '@/components/SuspenseLazy';
 import {RouteObject, Navigate, Outlet} from 'react-router-dom';
 // import PrivateRoute from './PrivateRoute';
 // import Home from '@/view/Home';
-import DashBoard from '../view/DashBoard/index';
+import DashBoard from '@/view/DashBoard/index';
 import Stake from '@/view/stake/index';
 import Bond from '@/view/bond/index';
 import ClaimProfit from '@/view/claimProfit/index';
@@ -15,25 +16,8 @@ import WinReward from '@/view/winReward/index';
 import DaoReward from '@/view/daoReward/index';
 import IdoReward from '@/view/idoReward/index';
 import Boadroom from '@/view/boadroom/index';
+import Navbar from '@/components/navbar';
 
-import Navbar from '../components/navbar';
-
-
-
-
-
-
-
-// import Introduce from '@/view/Home/Introduce';
-// import IntroduceTwo from '@/view/Home/IntroduceTwo';
-// import IntroduceThree from '@/view/Home/IntroduceThree';
-
-// const Introduce = () => import(/* webpackChunkName:"Introduce" */ '@/view/Home/Introduce');
-// const IntroduceTwo = () => import(/* webpackChunkName:"Introduce" */ '@/view/Home/IntroduceTwo');
-// const IntroduceThree = () => import(/* webpackChunkName:"Introduce" */ '@/view/Home/IntroduceThree');
-
-// const Home = SuspenseLazy(() => import(/* webpackChunkName:"home" */ '@/view/Home'));
-// const Mint = SuspenseLazy(() => import(/* webpackChunkName:"Mint" */ '@/view/Home/Mint'));
 const routes: RouteObject[] = [
   {
     path: '/',
