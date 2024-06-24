@@ -8,7 +8,20 @@
     "WINReward": "WIN Reward",
     "DAOReward": "DAO Reward",
     "IDORelease": "IDO Release",
-    "Boardroom": "Boardroom"
+    "Boardroom": "Boardroom",
+    "ADDRESS": "ADDRESS",
+    "INVITATION": "Invitation Code: ",
+    "Assets": "Assets",
+    "Inviter": "Inviter"
+  },
+  "dashBoard": {
+    "MarketCap": "Market Cap",
+    "PEXPrice": "PEX Price",
+    "BackingPerPEx": "Backing per PEX",
+    "TotalMintin": "Total Minting Quantity Of PEX",
+    "winPrice": "WIN Price",
+    "title1": "Risk Free Value Of Treasury 1 Assets"
+
   },
   "global": {
     "Boardroom": "Boardroom"

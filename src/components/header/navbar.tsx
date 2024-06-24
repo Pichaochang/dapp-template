@@ -8,7 +8,7 @@ import WalletDrawer from '@/components/header/walletDrawer';
 
 export default function Navbar() {
   return (
-    <header className='flex h-16 w-full items-center justify-between'>
+    <header className='flex h-16 w-full items-center justify-between select-none'>
       <div className=''>
         <MenuDrawer></MenuDrawer>
       </div>
