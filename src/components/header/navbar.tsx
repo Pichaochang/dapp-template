@@ -1,10 +1,10 @@
 import React from 'react';
 
-import ThemeToggle from './ui/theme-toggle';
-import LanguageToggle from './ui/language-toggle';
+import ThemeToggle from '../ui/theme-toggle';
+import LanguageToggle from '../ui/language-toggle';
 import { Wallet } from 'lucide-react';
 import {useTranslation} from 'react-i18next';
-import {MenuDrawer} from '@/components/menuDrawer';
+import {MenuDrawer} from '@/components/header/menuDrawer';
 
 
 export default function Navbar() {

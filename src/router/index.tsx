@@ -16,7 +16,7 @@ import WinReward from '@/view/winReward/index';
 import DaoReward from '@/view/daoReward/index';
 import IdoReward from '@/view/idoReward/index';
 import Boadroom from '@/view/boadroom/index';
-import Navbar from '@/components/navbar';
+import Navbar from '@/components/header/navbar';
 
 const routes: RouteObject[] = [
   {
