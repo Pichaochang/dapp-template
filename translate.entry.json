@@ -34,6 +34,20 @@
     "noStake": "No stake date is avaiable"
     
   },
+  "bond": {
+    "SingleStake": "Bond (1,1)",
+    "TreasuryBalance": "Treasury Balance",
+    "PEXPrice": "PEX Price",
+
+    "TotalDeposited": "Total Deposited",
+    "CurrentIndex": "Current Index",
+    "title": "First time staking PEX? ",
+    "title2": "Please approve PHOENIX to use your PEX",
+    "StakeList": "Stake List",
+    "Approve": "Approve",
+    "noStake": "No stake date is avaiable"
+    
+  },
   "global": {
     "Boardroom": "Boardroom"
   }
