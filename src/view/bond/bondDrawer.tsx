@@ -17,7 +17,8 @@ import {
 import { useState } from "react";
 export default function BondDrawaer() {
   const { t } = useTranslation();
-  const [open, setOpen] =useState(false)
+  const [open, setOpen] = useState(false)
+  const [btnLoading, setBtnLoading] = useState(false)
   return (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
@@ -74,8 +75,12 @@ export default function BondDrawaer() {
               </ResponsiveContainer>
             </div>
           </div> */}
-          <LoadingButton loading={true} size='my' variant="my" onClick={() => {
-            setOpen(false)
+          <LoadingButton loading={btnLoading} size='my' variant="my" onClick={() => {
+            setBtnLoading(true)
+            setTimeout(() => {
+              setBtnLoading(false)
+              // setOpen(false)
+            }, 3000)
           }}>{t('stake.Approve')}</LoadingButton>
           
           {/* <DrawerFooter>

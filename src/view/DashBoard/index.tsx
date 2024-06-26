@@ -50,7 +50,7 @@ const DashBoard = () => {
             <span></span>
           </div>
           <div className='bg-[#EEEEEE] h-40 w-full rounded-sm mt-2'>
-            <ChartComponent></ChartComponent>
+            {/* <ChartComponent></ChartComponent> */}
           </div>
           
         </div>
