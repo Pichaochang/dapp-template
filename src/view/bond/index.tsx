@@ -2,8 +2,8 @@ import React from 'react';
 import { observer } from 'mobx-react-lite';
 import { useStores } from '@/store';
 import { useTranslation } from 'react-i18next';
-import { Button } from '@/components/ui/button';
-
+// import { Button } from '@/components/ui/button';
+import BondDrawaer from './bondDrawer'
 const Bond = () => {
   const { t } = useTranslation();
 
@@ -39,10 +39,8 @@ const Bond = () => {
         </div>
 
         <div className='text-center'>
-          <Button size='my' variant="my">{t('stake.Approve')}</Button>
+          <BondDrawaer></BondDrawaer>
         </div>
-        
-
       </div>
 
       <div className='bg-[#fff] dark:bg-[#1d1d1b] rounded-lg p-2 mt-3'>
