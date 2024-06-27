@@ -13,7 +13,7 @@ import {
   DialogDescription,
   DialogFooter,
   DialogHeader,
-  // DialogTitle,
+  DialogTitle,
   // DialogTrigger,
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
@@ -45,10 +45,12 @@ export default observer(function DialogCloseButton(props:any) {
         <LoadingButton variant="my">Share</LoadingButton>
       </DialogTrigger> */}
       <DialogContent className=" max-w-72 rounded-lg">
-        <DialogHeader>
+        <DialogTitle className='text-center'>
           <DialogDescription>
             {t('bind.title')}
           </DialogDescription>
+        </DialogTitle>
+        <DialogHeader>
         </DialogHeader>
         <div className=" ">
           <div className="">
