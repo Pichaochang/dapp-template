@@ -1,42 +1,60 @@
-import * as React from 'react';
 
+'use client';
+import { useEffect } from 'react';
+import * as React from 'react';
 import { observer } from 'mobx-react-lite';
 import { useStores } from '@/store';
 import { LoadingButton } from '@/components/ui/loadingButton';
 
 import {
   Dialog,
-  DialogClose,
+  // DialogClose,
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
-  DialogTitle,
-  DialogTrigger,
+  // DialogTitle,
+  // DialogTrigger,
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { useTranslation } from 'react-i18next';
 
-export default observer(function DialogCloseButton() {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default observer(function DialogCloseButton(props:any) {
+  const {open, setOpen} = props;
+  const [loading, setLoading] = React.useState(false);
+  
   const { t } = useTranslation();
   const {globalStore} = useStores();
+  const handleOpenChange = (bol:boolean) => {
+    setOpen(bol);
+  };
+  const hanldeClick = async () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setOpen(false);
+    }, 3000);
+  };
+  useEffect(() => {
+    setOpen(true);
+  }, []);
   return (
-    <Dialog>
-      <DialogTrigger asChild>
+    <Dialog open={open} onOpenChange={handleOpenChange}>
+      {/* <DialogTrigger asChild>
         <LoadingButton variant="my">Share</LoadingButton>
-      </DialogTrigger>
+      </DialogTrigger> */}
       <DialogContent className=" max-w-72 rounded-lg">
         <DialogHeader>
-          <DialogTitle>Share link</DialogTitle>
           <DialogDescription>
             {t('bind.title')}
           </DialogDescription>
         </DialogHeader>
-        <div className="flex flex-col items-center ">
-          <div className="flex">
-            <div>
+        <div className=" ">
+          <div className="">
+            <DialogDescription className='my-2'>
               {t('bind.wallet')}
-            </div>
+            </DialogDescription>
             <Input
               id="link"
               defaultValue={globalStore.userInfo.address}
@@ -44,9 +62,9 @@ export default observer(function DialogCloseButton() {
             />
           </div>
           <div className="">
-            <div>
+            <DialogDescription className='my-2'>
               {t('bind.code')}
-            </div>
+            </DialogDescription>
             <Input
               id="link"
               defaultValue={globalStore.userInfo.code}
@@ -54,15 +72,10 @@ export default observer(function DialogCloseButton() {
             />
           </div>
         </div>
-        <DialogFooter className="sm:justify-start">
-          <DialogClose asChild>
-            <LoadingButton type="button" variant="my">
-              {t('global.sumbit')}
-            </LoadingButton>
-            <LoadingButton type="button" variant="my">
-              {t('global.close')}
-            </LoadingButton>
-          </DialogClose>
+        <DialogFooter className="flex">
+          <LoadingButton type="button" variant="my" loading={loading} onClick={hanldeClick}>
+            {t('global.submit')}
+          </LoadingButton>
         </DialogFooter>
       </DialogContent>
     </Dialog>

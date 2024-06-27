@@ -10,8 +10,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
-import lightIcon from '@/assets/common/light/light.png'
-import darkIcon from '@/assets/common/dark/light.png'
+import lightIcon from '@/assets/common/light/light.png';
+import darkIcon from '@/assets/common/dark/light.png';
 import { useTheme } from '@/providers/theme';
 
 export default function ThemeToggle() {
@@ -20,7 +20,7 @@ export default function ThemeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-      <img className='h-6 w-6 mr-4' src={theme === 'dark' ? darkIcon : lightIcon} alt="" />  
+        <img className='h-6 w-6 mr-4' src={theme === 'dark' ? darkIcon : lightIcon} alt="" />  
       </DropdownMenuTrigger>
       <DropdownMenuContent data-testid='theme-dropdown-content' align='end'>
         <DropdownMenuItem data-testid='theme-light' onClick={() => setTheme('light')}>

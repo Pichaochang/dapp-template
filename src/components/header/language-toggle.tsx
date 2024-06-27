@@ -8,14 +8,14 @@ import {
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
 import {useTranslation, } from 'react-i18next';
-import languageIcon from '@/assets/common/light/language.png'
-import darkLanguageIcon from '@/assets/common/dark/language.png'
+import languageIcon from '@/assets/common/light/language.png';
+import darkLanguageIcon from '@/assets/common/dark/language.png';
 import { useTheme } from '@/providers/theme';
 
 
 export default function LanguageToggle() {
   const { theme } = useTheme();
-  const { i18n } = useTranslation()
+  const { i18n } = useTranslation();
   const changeLanguage = i18n.changeLanguage;
   return (
     <DropdownMenu>

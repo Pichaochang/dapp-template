@@ -3,7 +3,7 @@ import React from 'react';
 import ThemeToggle from '@/components/header/theme-toggle';
 import LanguageToggle from '@/components/header/language-toggle';
 import {MenuDrawer} from '@/components/header/menuDrawer';
-import WalletDrawer from '@/components/header/walletDrawer';
+// import WalletDrawer from '@/components/header/walletDrawer';
 import WalletSheet from '@/components/header/walletSheet';
 import {observer} from 'mobx-react-lite';
 
@@ -23,4 +23,4 @@ export default observer(function Navbar() {
       
     </header>
   );
-})
+});
