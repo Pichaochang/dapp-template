@@ -1,4 +1,9 @@
 {
+  "bind": {
+    "title": "Bind Invitation Code",
+    "wallet": "Wallet Address",
+    "code": "Invitation Code"
+  },
   "header": {
     "wallet": "Wallet",
     "Dashboard": "Dashboard",
@@ -12,7 +17,7 @@
     "ADDRESS": "ADDRESS",
     "INVITATION": "Invitation Code: ",
     "Assets": "Assets",
-    "Inviter": "Inviter"
+    "Inviter": "INVITER"
   },
   "dashBoard": {
     "MarketCap": "Market Cap",
@@ -49,6 +54,8 @@
   },
   "global": {
     "Boardroom": "Boardroom",
-    "copySuccess": "copy success"
+    "copySuccess": "copy success",
+    "close": "Close",
+    "submit": "Submit"
   }
 }

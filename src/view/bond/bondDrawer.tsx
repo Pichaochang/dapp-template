@@ -1,10 +1,10 @@
-import * as React from "react"
+import * as React from 'react';
 // import { MinusIcon, PlusIcon } from "@radix-ui/react-icons"
 // import { Bar, BarChart, ResponsiveContainer } from "recharts"
 import { useTranslation } from 'react-i18next';
-import { Skeleton } from "@/components/ui/skeleton"
+import { Skeleton } from '@/components/ui/skeleton';
 
-import { LoadingButton } from "@/components/ui/loadingButton"
+import { LoadingButton } from '@/components/ui/loadingButton';
 import {
   Drawer,
   DrawerClose,
@@ -14,23 +14,23 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/components/ui/drawer"
-import { useState } from "react";
+} from '@/components/ui/drawer';
+import { useState } from 'react';
 export default function BondDrawaer() {
   const { t } = useTranslation();
-  const [open, setOpen] = useState(false)
-  const [btnLoading, setBtnLoading] = useState(false)
+  const [open, setOpen] = useState(false);
+  const [btnLoading, setBtnLoading] = useState(false);
   return (
     // onOpenChange={setOpen}
     <Drawer open={open} >
       <DrawerTrigger asChild>
         <LoadingButton loading={btnLoading} size='my' variant="my" onClick={() => {
           setTimeout(() => {
-            setBtnLoading(true)
-            setOpen(true)
+            setBtnLoading(true);
+            setOpen(true);
             // setOpen(false)
-            setBtnLoading(false)
-          }, 3000)
+            setBtnLoading(false);
+          }, 3000);
         }}>{t('stake.Approve')}</LoadingButton>
       </DrawerTrigger>
       <DrawerContent className="dark:border-none">
@@ -86,21 +86,21 @@ export default function BondDrawaer() {
           </div> */}
           <Skeleton></Skeleton>
 
-        <div>
           <div>
-            <div>Bond Price</div>
-            <div>Market Price</div>
+            <div>
+              <div>Bond Price</div>
+              <div>Market Price</div>
+            </div>
           </div>
-        </div>
 
           <DrawerFooter className="mb-5">
             <div className="flex items-center justify-center">
               <LoadingButton loading={btnLoading} size='my' variant="my" onClick={() => {
-                setBtnLoading(true)
+                setBtnLoading(true);
                 setTimeout(() => {
-                  setBtnLoading(false)
+                  setBtnLoading(false);
                   // setOpen(false)
-                }, 3000)
+                }, 3000);
               }}>{t('stake.Approve')}</LoadingButton>
               {/* <DrawerClose asChild>
                 <Button variant="outline">Cancel</Button>
@@ -110,5 +110,5 @@ export default function BondDrawaer() {
         </div>
       </DrawerContent>
     </Drawer>
-  )
+  );
 }

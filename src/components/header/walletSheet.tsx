@@ -29,7 +29,7 @@ export default function walletSheet() {
   const { theme } = useTheme();
   const navigate = useNavigate();
   console.log('navigate', navigate);
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const handleOpenChange = (isOpen: boolean) => {
     setOpen(isOpen);
   };
@@ -89,7 +89,7 @@ export default function walletSheet() {
 					
 
 
-          <div>{t('header.Inviter')}</div>
+          <div className='mt-3'>{t('header.Inviter')}</div>
           <div className="bg-[#F5F5F5] dark:bg-[#343432] rounded-md mt-2 p-2">
             <div className='flex items-center justify-between text-xs  text-[#ababab] dark:text-[#2a2a28]'>
               <span>领导者地址</span>
