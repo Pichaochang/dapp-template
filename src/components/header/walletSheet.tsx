@@ -42,12 +42,12 @@ export default function walletSheet() {
           <span className='text-white text-xs'>{t('header.wallet')}</span>
         </div>
       </SheetTrigger>
-      <SheetContent className='p-3'>
+      <SheetContent className='p-3 dark:bg-[#1d1d1b]'>
         <div className="mt-3">
           <div>{t('header.ADDRESS')}</div>
           <div className="bg-[#F5F5F5] dark:bg-[#343432] rounded-md mt-2 p-2">
             <div className='flex items-center justify-between text-xs  text-[#ababab] dark:text-[#2a2a28]'>
-              <span>钱包地址</span>
+              <span className='dark:text-[#585857]'>钱包地址</span>
               <img onClick={() => {
                 copy('2121');
                 toast.success(t('global.copySuccess'));
@@ -57,14 +57,14 @@ export default function walletSheet() {
 
           <div className="bg-[#F5F5F5] dark:bg-[#343432] rounded-md mt-2 p-2">
             <div className='flex items-center justify-between text-xs  text-[#ababab] dark:text-[#2a2a28]'>
-              <span>{t('header.INVITATION')}</span>
+              <span className='dark:text-[#585857]'>{t('header.INVITATION')}</span>
               <img onClick={() => {
                 copy('2121');
                 toast.success(t('global.copySuccess'));
               }} className='h-4 w-4 mr-2' src={theme === 'dark' ? darkCopyIcon : copyIcon} alt="" />
             </div>
           </div>
-          <div className='mt-3'>{t('header.Assets')}</div>
+          <div className='mt-3 dark:text-[#585857]'>{t('header.Assets')}</div>
 
           {/* 五个代币地址 */}
           <div className="bg-[#F5F5F5] dark:bg-[#343432] rounded-md mt-2 p-2">
@@ -74,9 +74,9 @@ export default function walletSheet() {
                   <img className='h-6 w-6' src={favicon} alt="" />
                 </div>
                 <div className='text-[#212121]'>
-                  <div>PEX</div>
-                  <div className='text-[#ababab] dark:text-[#2a2a28]'>33G</div>
-                  <div className='text-[#ababab] dark:text-[#2a2a28]'>$17.654</div>
+                  <div className='dark:text-white'>PEX</div>
+                  <div className='text-[#ababab] dark:text-[#585857]'>33G</div>
+                  <div className='text-[#ababab] dark:text-[#585857]'>$17.654</div>
                 </div>
               </div>
               <div className='flex items-center justify-between'>
@@ -92,7 +92,7 @@ export default function walletSheet() {
           <div className='mt-3'>{t('header.Inviter')}</div>
           <div className="bg-[#F5F5F5] dark:bg-[#343432] rounded-md mt-2 p-2">
             <div className='flex items-center justify-between text-xs  text-[#ababab] dark:text-[#2a2a28]'>
-              <span>领导者地址</span>
+              <span className='dark:text-[#585857]'>领导者地址</span>
             </div>
           </div>
         </div>
