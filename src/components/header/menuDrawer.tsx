@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   DropdownMenu,
@@ -7,31 +7,31 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from '@/components/ui/dropdown-menu';
 
-import favicon from '@/assets/common//favicon.png'
+import favicon from '@/assets/common//favicon.png';
 
-import dashboardIcon from '@/assets/common/light/dashboard.png'
-import stakeIcon from '@/assets/common/light/stake.png'
-import bondIcon from '@/assets/common/light/bond.png'
-import claimIcon from '@/assets/common/light/claim.png'
-import winRewardIcon from '@/assets/common/light/winReward.png'
-import daoRewardIcon from '@/assets/common/light/daoReward.png'
-import idoRewardIcon from '@/assets/common/light/idoReward.png'
-import boardroomIcon from '@/assets/common/light/boardroom.png'
+import dashboardIcon from '@/assets/common/light/dashboard.png';
+import stakeIcon from '@/assets/common/light/stake.png';
+import bondIcon from '@/assets/common/light/bond.png';
+import claimIcon from '@/assets/common/light/claim.png';
+import winRewardIcon from '@/assets/common/light/winReward.png';
+import daoRewardIcon from '@/assets/common/light/daoReward.png';
+import idoRewardIcon from '@/assets/common/light/idoReward.png';
+import boardroomIcon from '@/assets/common/light/boardroom.png';
 
-import darkDashboardIcon from '@/assets/common/dark/dashboard.png'
-import darkStakeIcon from '@/assets/common/dark/stake.png'
-import darkBondIcon from '@/assets/common/dark/bond.png'
-import darkClaimIcon from '@/assets/common/dark/claim.png'
-import darkWinRewardIcon from '@/assets/common/dark/winReward.png'
-import darkDaoRewardIcon from '@/assets/common/dark/daoReward.png'
-import darkIdoRewardIcon from '@/assets/common/dark/idoReward.png'
-import darkBoardroomIcon from '@/assets/common/dark/boardroom.png'
-import { useTheme } from "@/providers/theme";
-import { useNavigate } from "react-router-dom";
-import menuIcon from '@/assets/common/light/menu.png'
-import darkMenuIcon from '@/assets/common/dark/menu.png'
+import darkDashboardIcon from '@/assets/common/dark/dashboard.png';
+import darkStakeIcon from '@/assets/common/dark/stake.png';
+import darkBondIcon from '@/assets/common/dark/bond.png';
+import darkClaimIcon from '@/assets/common/dark/claim.png';
+import darkWinRewardIcon from '@/assets/common/dark/winReward.png';
+import darkDaoRewardIcon from '@/assets/common/dark/daoReward.png';
+import darkIdoRewardIcon from '@/assets/common/dark/idoReward.png';
+import darkBoardroomIcon from '@/assets/common/dark/boardroom.png';
+import { useTheme } from '@/providers/theme';
+import { useNavigate } from 'react-router-dom';
+import menuIcon from '@/assets/common/light/menu.png';
+import darkMenuIcon from '@/assets/common/dark/menu.png';
 export function MenuDrawer() {
   const { t } = useTranslation();
   const { theme } = useTheme();
@@ -104,5 +104,5 @@ export function MenuDrawer() {
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

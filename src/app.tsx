@@ -1,7 +1,8 @@
 import React from 'react';
 import routes from './router';
 import { useRoutes } from 'react-router-dom';
-import { Toaster } from "@/components/ui/toaster"
+// import { Toaster } from '@/components/ui/toaster'
+import { Toaster } from 'react-hot-toast';
 
 
 function App() {
