@@ -2,6 +2,7 @@ import * as React from "react"
 // import { MinusIcon, PlusIcon } from "@radix-ui/react-icons"
 // import { Bar, BarChart, ResponsiveContainer } from "recharts"
 import { useTranslation } from 'react-i18next';
+import { Skeleton } from "@/components/ui/skeleton"
 
 import { LoadingButton } from "@/components/ui/loadingButton"
 import {
@@ -20,15 +21,23 @@ export default function BondDrawaer() {
   const [open, setOpen] = useState(false)
   const [btnLoading, setBtnLoading] = useState(false)
   return (
-    <Drawer open={open} onOpenChange={setOpen}>
+    // onOpenChange={setOpen}
+    <Drawer open={open} >
       <DrawerTrigger asChild>
-      <LoadingButton size='my' variant="my">{t('stake.Approve')}</LoadingButton>
+        <LoadingButton loading={btnLoading} size='my' variant="my" onClick={() => {
+          setTimeout(() => {
+            setBtnLoading(true)
+            setOpen(true)
+            // setOpen(false)
+            setBtnLoading(false)
+          }, 3000)
+        }}>{t('stake.Approve')}</LoadingButton>
       </DrawerTrigger>
       <DrawerContent className="dark:border-none">
         <div className="mx-auto w-full max-w-sm">
           <DrawerHeader>
-            <DrawerTitle>Move Goal</DrawerTitle>
-            <DrawerDescription>Set your daily activity goal.</DrawerDescription>
+            <DrawerTitle>THS-USDT LP</DrawerTitle>
+            {/* <DrawerDescription>Set your daily activity goal.</DrawerDescription> */}
           </DrawerHeader>
           {/* <div className="p-4 pb-0">
             <div className="flex items-center justify-center space-x-2">
@@ -75,21 +84,29 @@ export default function BondDrawaer() {
               </ResponsiveContainer>
             </div>
           </div> */}
-          <LoadingButton loading={btnLoading} size='my' variant="my" onClick={() => {
-            setBtnLoading(true)
-            setTimeout(() => {
-              setBtnLoading(false)
-              // setOpen(false)
-            }, 3000)
-          }}>{t('stake.Approve')}</LoadingButton>
-          
-          {/* <DrawerFooter>
+          <Skeleton></Skeleton>
+
+        <div>
+          <div>
+            <div>Bond Price</div>
+            <div>Market Price</div>
+          </div>
+        </div>
+
+          <DrawerFooter className="mb-5">
             <div className="flex items-center justify-center">
-              <DrawerClose asChild>
+              <LoadingButton loading={btnLoading} size='my' variant="my" onClick={() => {
+                setBtnLoading(true)
+                setTimeout(() => {
+                  setBtnLoading(false)
+                  // setOpen(false)
+                }, 3000)
+              }}>{t('stake.Approve')}</LoadingButton>
+              {/* <DrawerClose asChild>
                 <Button variant="outline">Cancel</Button>
-              </DrawerClose>
+              </DrawerClose> */}
             </div>
-          </DrawerFooter> */}
+          </DrawerFooter>
         </div>
       </DrawerContent>
     </Drawer>
