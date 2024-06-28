@@ -17,7 +17,6 @@ type ThemeProviderState = {
 
 const initialState: ThemeProviderState = {
   theme: 'system',
-  // eslint-disable-next-line unicorn/no-null
   setTheme: () => null
 };
 

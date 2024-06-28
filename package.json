@@ -14,8 +14,9 @@
   "scripts": {
     "ts": "translate",
     "postinstall": "husky & playwright install",
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev": "vite --mode dev",
+    "build": "tsc && vite build --mode product",
+    "bd": "tsc && vite build --mode dev",
     "preview": "vite preview",
     "lint": "eslint --ext ts --ext tsx ./src",
     "lint:fix": "eslint --ext ts --ext tsx ./src --fix",
