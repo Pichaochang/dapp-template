@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+// import { Button } from '@/components/ui/button';
+// import { Input } from '@/components/ui/input';
 // import { Label } from "@/components/ui/label"
+import { globalVaild } from '@/utils/commonSdk';
 import {
   Sheet,
   SheetContent,
@@ -33,11 +34,15 @@ export default function walletSheet() {
   const handleOpenChange = (isOpen: boolean) => {
     setOpen(isOpen);
   };
+  const openWallet =  async () => {
+    await globalVaild();
+    setOpen(true);
+  };
   return (
     <Sheet open={open} onOpenChange={handleOpenChange}>
       <SheetTrigger asChild>
         {/* <Button variant="outline">Open</Button> */}
-        <div onClick={() => setOpen(!open)} className='flex items-center mr-4 py-1 px-2 rounded-3xl' style={{ background: 'linear-gradient(90deg, #AA3EFF 0%, #B40DB9 100%)' }}>
+        <div onClick={() => openWallet} className='flex items-center mr-4 py-1 px-2 rounded-3xl' style={{ background: 'linear-gradient(90deg, #AA3EFF 0%, #B40DB9 100%)' }}>
           <img onClick={() => setOpen(true)} className='h-4 w-4 mr-2' src={theme === 'dark' ? darkWalletIcon : walletIcon} alt="" />
           <span className='text-white text-xs'>{t('header.wallet')}</span>
         </div>

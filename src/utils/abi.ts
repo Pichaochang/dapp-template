@@ -1,5 +1,5 @@
 
-const ERC20Abi = [
+export const ERC20Abi = [
   {inputs: [], payable: false, stateMutability: 'nonpayable', type: 'constructor'},
   {
     anonymous: false,
@@ -230,7 +230,5 @@ const ERC20Abi = [
     type: 'function'
   }
 ];
-export const abis = {
-  ERC20Abi,
-};
+
 

@@ -20,7 +20,7 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src", "_config.ts", ".eslintrc.cjs", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.js"],
+  "include": ["src", "_config.ts", ".eslintrc.cjs", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.js", "**/*.d.ts"],
   "exclude": ["node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
