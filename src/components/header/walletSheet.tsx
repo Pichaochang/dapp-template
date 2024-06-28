@@ -7,6 +7,7 @@ import { globalVaild } from '@/utils/commonSdk';
 import {
   Sheet,
   SheetContent,
+  SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet';
 import { useState } from 'react';
@@ -19,6 +20,7 @@ import darkShareIcon from '@/assets/common/dark/share.png';
 import favicon from '@/assets/common//favicon.png';
 
 import copy from 'copy-to-clipboard';
+import { useStores } from '@/store';
 
 import toast from 'react-hot-toast';
 import { useTheme } from '@/providers/theme';
@@ -26,6 +28,7 @@ import { useNavigate } from 'react-router-dom';
 import walletIcon from '@/assets/common/light/wallet.png';
 import darkWalletIcon from '@/assets/common/dark/wallet.png';
 export default function walletSheet() {
+  const { globalStore } = useStores();
   const { t } = useTranslation();
   const { theme } = useTheme();
   const navigate = useNavigate();
@@ -35,8 +38,11 @@ export default function walletSheet() {
     setOpen(isOpen);
   };
   const openWallet =  async () => {
-    await globalVaild();
-    setOpen(true);
+    if (!globalStore.userInfo.address) {
+      await globalVaild();
+    } else {
+      setOpen(true);
+    }
   };
   return (
     <Sheet open={open} onOpenChange={handleOpenChange}>
@@ -48,6 +54,7 @@ export default function walletSheet() {
         </div>
       </SheetTrigger>
       <SheetContent className='p-3 dark:bg-[#1d1d1b]'>
+        <SheetTitle></SheetTitle>
         <div className="mt-3">
           <div>{t('header.ADDRESS')}</div>
           <div className="bg-[#F5F5F5] dark:bg-[#343432] rounded-md mt-2 p-2">

@@ -56,6 +56,7 @@
     "Boardroom": "Boardroom",
     "copySuccess": "copy success",
     "close": "Close",
-    "submit": "Submit"
+    "submit": "Submit",
+    "installWallet": "Please install wallet"
   }
 }

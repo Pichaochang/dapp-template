@@ -8,7 +8,7 @@ class Global {
     // makeAutoObservable: 自动将所有属性和方法转换为可观察对象。
     makeAutoObservable(this);
   }
-  address = '0x';
+  address = '';
   count = 0;
   dufRatio = 0;
   name = 'react';
@@ -17,7 +17,7 @@ class Global {
   userInfo: any = {
     code: null,
     id: 0,
-    address: '0x',
+    address: '',
     leaderAddress: '',
     dreamBalance: '',
     dreamEqUsdtBalance: '',

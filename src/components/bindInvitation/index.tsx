@@ -37,7 +37,7 @@ export default observer(function DialogCloseButton(props:any) {
     }, 3000);
   };
   useEffect(() => {
-    setOpen(true);
+    // setOpen(true);
   }, []);
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
