@@ -29,6 +29,9 @@ class Global {
   setUserInfo = (userInfo: any) => {
     this.userInfo = userInfo;
   };
+  setAddress = (address: any) => {
+    this.address = address;
+  };
   setToken = (token: any) => {
     this.token = token;
   };

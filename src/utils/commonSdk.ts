@@ -15,15 +15,24 @@ console.log('winAddress', winAddress);
 console.log('usdbAddress', usdbAddress);
 console.log('lpAddress', lpAddress);
 console.log('sbAddress', sbAddress);
+// 登录钱包
 console.log('rpc', rpc);
-
+export const getUserInfo  = async () => {
+  // todo
+};
+export const loginWallet = async () => {
+  const accounts = await window.ethereum.request({method: 'eth_requestAccounts'});
+  const address = accounts[0];
+  globalStore.setAddress(address);
+  console.log('accounts', accounts, address);
+};
+// 前置检验
 export const globalVaild = async () => {
-  console.log('globalStore', globalStore, ERC20Abi);
-  if(window?.ethereum) {
+  if(!window?.ethereum) {
     toast.error(t('global.installWallet'));
     return Promise.resolve(false);
   }
-  if (!globalStore.userInfo.address) {
+  if (!globalStore.address) {
     try {
       await loginWallet();
     } catch (error) {
@@ -36,7 +45,4 @@ export const globalVaild = async () => {
 //   const signer = provider.getSigner();
 //   const contract = new ethers.Contract(chainInfo.value.ModeAddress, abi, signer);
 };
-export const loginWallet = async () => {
-  const accounts = await window.ethereum.request({method: 'eth_requestAccounts'});
-  console.log('accounts', accounts);
-};
+

@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 // import { Input } from '@/components/ui/input';
 // import { Label } from "@/components/ui/label"
 import { globalVaild } from '@/utils/commonSdk';
+import { formatAddress } from '@/utils/utils';
 import {
   Sheet,
   SheetContent,
@@ -38,7 +39,7 @@ export default function walletSheet() {
     setOpen(isOpen);
   };
   const openWallet =  async () => {
-    if (!globalStore.userInfo.address) {
+    if (!globalStore.address) {
       await globalVaild();
     } else {
       setOpen(true);
@@ -48,9 +49,9 @@ export default function walletSheet() {
     <Sheet open={open} onOpenChange={handleOpenChange}>
       <SheetTrigger asChild>
         {/* <Button variant="outline">Open</Button> */}
-        <div onClick={() => openWallet} className='flex items-center mr-4 py-1 px-2 rounded-3xl' style={{ background: 'linear-gradient(90deg, #AA3EFF 0%, #B40DB9 100%)' }}>
-          <img onClick={() => setOpen(true)} className='h-4 w-4 mr-2' src={theme === 'dark' ? darkWalletIcon : walletIcon} alt="" />
-          <span className='text-white text-xs'>{t('header.wallet')}</span>
+        <div onClick={openWallet} className='flex items-center mr-4 py-1 px-2 rounded-3xl' style={{ background: 'linear-gradient(90deg, #AA3EFF 0%, #B40DB9 100%)' }}>
+          <img className='h-4 w-4 mr-2' src={theme === 'dark' ? darkWalletIcon : walletIcon} alt="" />
+          <span className='text-white text-xs'>{globalStore.address ? formatAddress(globalStore.address, 4, 4) : t('header.wallet')}</span>
         </div>
       </SheetTrigger>
       <SheetContent className='p-3 dark:bg-[#1d1d1b]'>
@@ -59,7 +60,7 @@ export default function walletSheet() {
           <div>{t('header.ADDRESS')}</div>
           <div className="bg-[#F5F5F5] dark:bg-[#343432] rounded-md mt-2 p-2">
             <div className='flex items-center justify-between text-xs  text-[#ababab] dark:text-[#2a2a28]'>
-              <span className='dark:text-[#585857]'>钱包地址</span>
+              <span className='dark:text-[#585857]'>{formatAddress(globalStore.address, 8, 8)}</span>
               <img onClick={() => {
                 copy('2121');
                 toast.success(t('global.copySuccess'));

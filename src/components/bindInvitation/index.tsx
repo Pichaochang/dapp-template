@@ -59,7 +59,7 @@ export default observer(function DialogCloseButton(props:any) {
             </DialogDescription>
             <Input
               id="link"
-              defaultValue={globalStore.userInfo.address}
+              defaultValue={globalStore.address}
               readOnly
             />
           </div>

@@ -15,4 +15,4 @@ export const formatAddress = (address: string, startNum = 3, endNum = 3) => {
   return `${address.slice(0, startNum)}...${address.slice(address.length - endNum, address.length)}`;
 };
 export const getUUID = () => uuidv4();
-// export const 
+
