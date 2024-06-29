@@ -24,11 +24,16 @@ export default function BondDrawaer() {
   const [btnLoading, setBtnLoading] = useState(false);
   return (
     // onOpenChange={setOpen}
-    <Drawer open={open}>
+    <Drawer open={open} onOpenChange={(val) => {
+      if (btnLoading) {
+        return;
+      }
+      setOpen(val);
+    }}>
       <DrawerTrigger asChild>
         <div className='flex'>
           <Input className='mr-2 dark:border-none dark:bg-[#fff] dark:text-[#000]'></Input>
-          <LoadingButton loading={btnLoading} size='my' variant="my" onClick={() => {
+          <LoadingButton size='my' variant="my" onClick={() => {
             setOpen(true);
           }} className=' shrink-0'>{t('stake.STAKE')}</LoadingButton>
         </div>
@@ -48,19 +53,13 @@ export default function BondDrawaer() {
 
           <DrawerFooter className="mb-5">
             <div className="flex items-center justify-center">
-              <LoadingButton className='mr-2' loading={btnLoading} size='my' variant="my" onClick={() => {
+              <LoadingButton loading={btnLoading} className='w-full rounded-2xl' size='lg' variant="my" onClick={() => {
                 if (btnLoading) return;
                 setBtnLoading(true);
                 setTimeout(() => {
                   setBtnLoading(false);
                 }, 3000);
               }}>{t('global.confirm')}</LoadingButton>
-              <DrawerClose  asChild>
-                <LoadingButton loading={btnLoading} onClick={() => {
-                  if (btnLoading) return;
-                  setOpen(false);
-                }} variant="secondary" size='my' >{t('global.close')}</LoadingButton>
-              </DrawerClose>
             </div>
           </DrawerFooter>
         </div>

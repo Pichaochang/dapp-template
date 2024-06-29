@@ -50,7 +50,7 @@ export default function BondDrawaer(props:any) {
 
           <DrawerFooter className="mb-5">
             <div className="flex items-center justify-center">
-              <LoadingButton loading={btnLoading}className='w-full rounded-2xl' size='lg' variant="my" onClick={() => {
+              <LoadingButton loading={btnLoading} className='w-full rounded-2xl' size='lg' variant="my" onClick={() => {
                 setBtnLoading(true);
                 setTimeout(() => {
                   setBtnLoading(false);
