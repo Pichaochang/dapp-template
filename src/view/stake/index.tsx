@@ -57,15 +57,15 @@ const Stake = () => {
               list.map((item:any, index) => {
                 return(<div key={index} className='flex items-center bg-[#fff] dark:bg-[#1d1d1b] rounded-lg p-2 mt-3'>
                   <div className="text-xs w-full grid grid-cols-2 ">
-                    <div className='p-1'>
+                    <div className='p-1 border-b-[1px] border-r-[1px] border-[#E0E0E0] dark:border-[#2d2d2b]'>
                       <div className='mb-1 text-center text-xs text-[#ababab] dark:text-[#939393]'>{t('stake.StakeTime')}</div>
                       <div className='text-center'>20:35:56 08-24 2024</div>
                     </div>
-                    <div className='p-1'>
+                    <div className='p-1 border-b-[1px] border-[#E0E0E0] dark:border-[#2d2d2b]'>
                       <div className='mb-1 text-center text-xs text-[#ababab] dark:text-[#939393]'>{t('stake.totalRewardOfStake')}</div>
                       <div className='text-center'>157 PEX</div>
                     </div>
-                    <div className='p-1'>
+                    <div className='p-1 border-r-[1px] border-[#E0E0E0] dark:border-[#2d2d2b]'>
                       <div className='mb-1 text-center text-xs text-[#ababab] dark:text-[#939393]'>{t('stake.StakePrncipal')}</div>
                       <div className='text-center'>358 PEX</div>
                     </div>

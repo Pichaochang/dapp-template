@@ -73,11 +73,14 @@
     "days": "days"
   },
   "claim": {
+    "claim": "CLAIM",
     "yourBalcance": "Your Balcance",
     "ACCELERATE": "ACCELERATE",
     "DurationOfRelea": "Duration Of Relea",
     "TotalAmountUnrelaased": "Total Amount Unrelaased",
     "QuantityReceived": "Quantity Received",
-    "TheNumberOfAvaiiable": "The Number Of Avaiiable"
+    "TheNumberOfAvaiiable": "The Number Of Avaiiable",
+    "TheRemainin": "The Remainin The Unrelaased"
+
   }
 }
