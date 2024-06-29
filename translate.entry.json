@@ -46,7 +46,10 @@
     
   },
   "bond": {
-    "SingleStake": "Bond (1,1)",
+    "THSPrice": "THS PRICE",
+    "TOTALPRICE": "TOTAL PRICE",
+    "Bond": "Bond[1,1]",
+    "BondPix": "Bond",
     "TreasuryBalance": "Treasury Balance",
     "PEXPrice": "PEX Price",
     "TotalDeposited": "Total Deposited",
@@ -55,8 +58,10 @@
     "title2": "Please approve PHOENIX to use your PEX",
     "StakeList": "STAKE LIST",
     "Approve": "Approve",
-    "noStake": "No stake date is avaiable"
-    
+    "noStake": "No stake date is avaiable",
+    "APY": "APY",
+    "PRICE": "PRICE",
+    "PurchaseQuantity": "Purchase Quantity"
   },
   "global": {
     "Boardroom": "Boardroom",
