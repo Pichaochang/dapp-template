@@ -57,6 +57,7 @@
     "copySuccess": "copy success",
     "close": "Close",
     "submit": "Submit",
-    "installWallet": "Please install wallet"
+    "installWallet": "Please install wallet",
+    "confrim": "Confrim"
   }
 }

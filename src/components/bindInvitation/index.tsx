@@ -37,14 +37,14 @@ export default observer(function DialogCloseButton(props:any) {
     }, 3000);
   };
   useEffect(() => {
-    // setOpen(true);
+    setOpen(true);
   }, []);
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       {/* <DialogTrigger asChild>
         <LoadingButton variant="my">Share</LoadingButton>
       </DialogTrigger> */}
-      <DialogContent className=" max-w-72 rounded-lg">
+      <DialogContent className=" max-w-72 rounded-lg dark:bg-[#343432]">
         <DialogTitle className='text-center'>
           <DialogDescription>
             {t('bind.title')}
@@ -54,29 +54,29 @@ export default observer(function DialogCloseButton(props:any) {
         </DialogHeader>
         <div className=" ">
           <div className="">
-            <DialogDescription className='my-2'>
+            <DialogDescription className='my-2 dark:text-white'>
               {t('bind.wallet')}
             </DialogDescription>
             <Input
-              id="link"
               defaultValue={globalStore.address}
               readOnly
+              className='border-none'
             />
           </div>
           <div className="">
-            <DialogDescription className='my-2'>
+            <DialogDescription className='my-2  dark:text-white'>
               {t('bind.code')}
             </DialogDescription>
             <Input
-              id="link"
               defaultValue={globalStore.userInfo.code}
               readOnly
+              className='border-none'
             />
           </div>
         </div>
         <DialogFooter className="flex">
           <LoadingButton type="button" variant="my" loading={loading} onClick={hanldeClick}>
-            {t('global.submit')}
+            {t('global.confrim')}
           </LoadingButton>
         </DialogFooter>
       </DialogContent>
