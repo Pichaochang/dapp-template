@@ -3,6 +3,7 @@ import { observer } from 'mobx-react-lite';
 import { useStores } from '@/store';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
+import StakeDrawer from './stakeDrawer';
 
 const Stake = () => {
   const { t } = useTranslation();
@@ -20,7 +21,7 @@ const Stake = () => {
 
         <div className='mb-3'>
           <div className=' text-md'>{t('stake.APY')}</div>
-          <div className='text-xs text-[#ababab] dark:text-[#2a2a28]'>$ 888,888.8888</div>
+          <div className='text-xs text-[#ababab] dark:text-[#2a2a28]'>791.5%</div>
         </div>
 
         <div className='mb-3'>
@@ -39,7 +40,7 @@ const Stake = () => {
         </div>
 
         <div className='text-center'>
-          <Button size='my' variant="my">{t('stake.Approve')}</Button>
+          <StakeDrawer />
         </div>
         
 

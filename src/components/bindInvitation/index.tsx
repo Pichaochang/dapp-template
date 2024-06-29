@@ -37,7 +37,7 @@ export default observer(function DialogCloseButton(props:any) {
     }, 3000);
   };
   useEffect(() => {
-    setOpen(true);
+    // setOpen(true);
   }, []);
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
@@ -76,7 +76,7 @@ export default observer(function DialogCloseButton(props:any) {
         </div>
         <DialogFooter className="flex">
           <LoadingButton type="button" variant="my" loading={loading} onClick={hanldeClick}>
-            {t('global.confrim')}
+            {t('global.confirm')}
           </LoadingButton>
         </DialogFooter>
       </DialogContent>

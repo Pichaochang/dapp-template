@@ -3,7 +3,7 @@ import { observer } from 'mobx-react-lite';
 import { useStores } from '@/store';
 import { useTranslation } from 'react-i18next';
 // import { Button } from '@/components/ui/button';
-import BondDrawaer from './bondDrawer'
+import BondDrawaer from './bondDrawer';
 const Bond = () => {
   const { t } = useTranslation();
 
