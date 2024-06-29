@@ -98,6 +98,9 @@
     "DividendCycle": "Dividend Cycle"
   },
   "ido": {
-    "x":"1.IDO Part 1 (65%):260PEX"
+    "index1":"IDO Part 1 (65%)",
+    "index2": "IDO Part 2 (35%)",
+    "QuantityReceived": "Quantity Received",
+    "TotalAmountCanReceive": "Total Amount Can Receive"
   }
 }
