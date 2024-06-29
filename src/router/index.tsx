@@ -27,8 +27,8 @@ const routes: RouteObject[] = [
     path: '/',
     element: (
       <>
-      <Navbar />
-      <Outlet></Outlet>
+        <Navbar />
+        <Outlet></Outlet>
         {/* <PrivateRoute>
           <Home />
         </PrivateRoute> */}
@@ -52,7 +52,7 @@ const routes: RouteObject[] = [
         element: <ClaimProfit></ClaimProfit>
       },
       {
-        path: 'Stake',
+        path: 'WinReward',
         element: <WinReward></WinReward>
       },
       {
