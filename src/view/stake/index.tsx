@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { observer } from 'mobx-react-lite';
 import { useStores } from '@/store';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import StakeDrawer from './stakeDrawer';
+import { LoadingButton } from '@/components/ui/loadingButton';
 
 const Stake = () => {
   const { t } = useTranslation();
-
+  const [btnLoading, setBtnLoading] = useState(false);
+  const [list, setList] = useState([{}, {}]);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { globalStore } = useStores();
   // const {count, name} = globaxlStore;
+
   return (
     <div>
       <div className='bg-[#fff] dark:bg-[#1d1d1b] rounded-lg p-2'>
@@ -21,17 +24,17 @@ const Stake = () => {
 
         <div className='mb-3'>
           <div className=' text-md'>{t('stake.APY')}</div>
-          <div className='text-xs text-[#ababab] dark:text-[#2a2a28]'>791.5%</div>
+          <div className='text-xs text-[#ababab] dark:text-[#939393]'>791.5%</div>
         </div>
 
         <div className='mb-3'>
           <div className=' text-md'>{t('stake.TotalDeposited')}</div>
-          <div className='text-xs text-[#ababab] dark:text-[#2a2a28]'>$ 888,888.8888</div>
+          <div className='text-xs text-[#ababab] dark:text-[#939393]'>$ 888,888.8888</div>
         </div>
 
         <div className='mb-3'>
           <div className=' text-md'>{t('stake.CurrentIndex')}</div>
-          <div className='text-xs text-[#ababab] dark:text-[#2a2a28]'>$ 888,888.8888</div>
+          <div className='text-xs text-[#ababab] dark:text-[#939393]'>$ 888,888.8888</div>
         </div>
 
         <div className='mt-6 mb-3 text-center'>
@@ -45,13 +48,44 @@ const Stake = () => {
         
 
       </div>
+      <div className='text-[#AF27DF] text-md'>{t('stake.StakeList')}</div>
 
-      <div className='bg-[#fff] dark:bg-[#1d1d1b] rounded-lg p-2 mt-3'>
+      <div className=''>
         <div className=''>
-          <div className='text-[#AF27DF] text-md'>{t('stake.StakeList')}</div>
-          <div className=' text-center text-xs text-[#ababab] dark:text-[#2a2a28]'>
-            <span>{t('stake.noStake')}</span>
-          </div>
+          
+          {
+            list.length ? 
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              list.map((item:any, index) => {
+                return(<div key={index} className='flex items-center bg-[#fff] dark:bg-[#1d1d1b] rounded-lg p-2 mt-3'>
+                  <div className="text-xs w-full grid grid-cols-2 ">
+                    <div className='p-1'>
+                      <div className='mb-1 text-center text-xs text-[#ababab] dark:text-[#939393]'>{t('stake.StakeTime')}</div>
+                      <div className='text-center'>20:35:56 08-24 2024</div>
+                    </div>
+                    <div className='p-1'>
+                      <div className='mb-1 text-center text-xs text-[#ababab] dark:text-[#939393]'>{t('stake.totalRewardOfStake')}</div>
+                      <div className='text-center'>157 PEX</div>
+                    </div>
+                    <div className='p-1'>
+                      <div className='mb-1 text-center text-xs text-[#ababab] dark:text-[#939393]'>{t('stake.StakePrncipal')}</div>
+                      <div className='text-center'>358 PEX</div>
+                    </div>
+                    <div className='p-1'>
+                      <div className='mb-1 text-center text-xs text-[#ababab] dark:text-[#939393]'>{t('stake.NextRebaseReward')}</div>
+                      <div className='text-center'>1026 PEX</div>
+                    </div>
+                  </div>
+                  <div>
+                    <LoadingButton loading={btnLoading} size='my' variant="my" onClick={() => {
+                    }} className=' shrink-0'>{t('stake.UNSTAKE')}</LoadingButton>
+                  </div>
+                </div>);
+              }):  
+              <div className=' text-center text-xs text-[#ababab] dark:text-[#939393]'>
+                <span>{t('stake.noStake')}</span>
+              </div>
+          }
         </div>
       </div>
     </div>

@@ -28,13 +28,19 @@
     "title1": "Risk Free Value Of Treasury 1 Assets"
   },
   "stake": {
+    "StakeTime": "Stake Time",
+    "totalRewardOfStake": "Total Reward Of Stake",
+    "StakePrncipal": "Stake Prncipal",
+    "NextRebaseReward": "Next Rebase Reward",
     "SingleStake": "Single Stake (3,3)",
     "APY": "APY",
     "TotalDeposited": "Total Deposited",
     "CurrentIndex": "Current Index",
     "title": "First time staking PEX? ",
     "title2": "Please approve PHOENIX to use your PEX",
-    "StakeList": "Stake List",
+    "StakeList": "STAKE LIST",
+    "UNSTAKE": "UNSTAKE",
+    "STAKE": "STAKE",
     "Approve": "Approve",
     "noStake": "No stake date is avaiable"
     
@@ -47,7 +53,7 @@
     "CurrentIndex": "Current Index",
     "title": "First time staking PEX? ",
     "title2": "Please approve PHOENIX to use your PEX",
-    "StakeList": "Stake List",
+    "StakeList": "STAKE LIST",
     "Approve": "Approve",
     "noStake": "No stake date is avaiable"
     

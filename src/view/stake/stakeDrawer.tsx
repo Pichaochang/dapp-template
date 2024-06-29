@@ -3,6 +3,7 @@ import * as React from 'react';
 // import { Bar, BarChart, ResponsiveContainer } from "recharts"
 import { useTranslation } from 'react-i18next';
 import { Skeleton } from '@/components/ui/skeleton';
+import { Input } from '@/components/ui/input';
 
 import { LoadingButton } from '@/components/ui/loadingButton';
 import {
@@ -25,9 +26,12 @@ export default function BondDrawaer() {
     // onOpenChange={setOpen}
     <Drawer open={open}>
       <DrawerTrigger asChild>
-        <LoadingButton loading={btnLoading} size='my' variant="my" onClick={() => {
-          setOpen(true);
-        }}>{t('stake.Approve')}</LoadingButton>
+        <div className='flex'>
+          <Input className='mr-2 dark:border-none dark:bg-[#fff] dark:text-[#000]'></Input>
+          <LoadingButton loading={btnLoading} size='my' variant="my" onClick={() => {
+            setOpen(true);
+          }} className=' shrink-0'>{t('stake.STAKE')}</LoadingButton>
+        </div>
       </DrawerTrigger>
       <DrawerContent className="dark:border-none">
         <div className="mx-auto w-full max-w-sm">
