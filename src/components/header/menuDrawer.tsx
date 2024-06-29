@@ -77,7 +77,7 @@ export function MenuDrawer() {
               <span>{t('header.ClaimProfit')}</span>
             </div>
           </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => handleClickLink('/Stake')}>
+          <DropdownMenuItem onClick={() => handleClickLink('/WinReward')}>
             <div className="flex items-center mb-1">
               <img className="h-5 w-5 mr-2" src={theme === 'light' ? winRewardIcon : darkWinRewardIcon} alt="" />
               <span>{t('header.WINReward')}</span>
@@ -95,12 +95,12 @@ export function MenuDrawer() {
               <span>{t('header.IDORelease')}</span>
             </div>
           </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => handleClickLink('/Boadroom')}>
+          {/* <DropdownMenuItem onClick={() => handleClickLink('/Boadroom')}>
             <div className="flex items-center mb-1">
               <img className="h-5 w-5 mr-2" src={theme === 'light' ?  boardroomIcon: darkBoardroomIcon} alt="" />
               <span>{t('header.Boardroom')}</span>
             </div>
-          </DropdownMenuItem>
+          </DropdownMenuItem> */}
         </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>

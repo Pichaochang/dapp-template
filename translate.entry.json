@@ -25,6 +25,8 @@
     "BackingPerPEx": "Backing per PEX",
     "TotalMintin": "Total Minting Quantity Of PEX",
     "winPrice": "WIN Price",
+    "winVAULT": "WIN VAULT",
+
     "title1": "Risk Free Value Of Treasury 1 Assets"
   },
   "stake": {
@@ -81,6 +83,21 @@
     "QuantityReceived": "Quantity Received",
     "TheNumberOfAvaiiable": "The Number Of Avaiiable",
     "TheRemainin": "The Remainin The Unrelaased"
-
+  },
+  "Redeem": {
+    "Redeem": "REDEEM"
+  },
+  "dao": {
+    "NODETYPE": "NODE TYPE",
+    "DAOReward": "DAO Reward",
+    "Primary": "Primary",
+    "Intermedidate": "Intermedidate",
+    "Senior": "Senior",
+    "Team1": "Team's sPEX increment",
+    "Team2": "Team's sPEX growth rate",
+    "DividendCycle": "Dividend Cycle"
+  },
+  "ido": {
+    "x":"1.IDO Part 1 (65%):260PEX"
   }
 }
