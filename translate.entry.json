@@ -69,6 +69,15 @@
     "close": "Close",
     "submit": "Submit",
     "installWallet": "Please install wallet",
-    "confirm": "Confirm"
+    "confirm": "Confirm",
+    "days": "days"
+  },
+  "claim": {
+    "yourBalcance": "Your Balcance",
+    "ACCELERATE": "ACCELERATE",
+    "DurationOfRelea": "Duration Of Relea",
+    "TotalAmountUnrelaased": "Total Amount Unrelaased",
+    "QuantityReceived": "Quantity Received",
+    "TheNumberOfAvaiiable": "The Number Of Avaiiable"
   }
 }

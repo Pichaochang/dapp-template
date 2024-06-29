@@ -2,17 +2,15 @@ import React, { useState } from 'react';
 import { observer } from 'mobx-react-lite';
 import { useStores } from '@/store';
 import { useTranslation } from 'react-i18next';
-import { Button } from '@/components/ui/button';
 import StakeDrawer from './stakeDrawer';
+import UnStakeDrawer from './unStakeDrawer';
 import { LoadingButton } from '@/components/ui/loadingButton';
 
 const Stake = () => {
   const { t } = useTranslation();
-  const [btnLoading, setBtnLoading] = useState(false);
   const [list, setList] = useState([{}, {}]);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { globalStore } = useStores();
-  // const {count, name} = globaxlStore;
 
   return (
     <div>
@@ -77,8 +75,7 @@ const Stake = () => {
                     </div>
                   </div>
                   <div>
-                    <LoadingButton loading={btnLoading} size='my' variant="my" onClick={() => {
-                    }} className=' shrink-0'>{t('stake.UNSTAKE')}</LoadingButton>
+                    <UnStakeDrawer></UnStakeDrawer>
                   </div>
                 </div>);
               }):  
