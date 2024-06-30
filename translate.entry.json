@@ -26,8 +26,10 @@
     "TotalMintin": "Total Minting Quantity Of PEX",
     "winPrice": "WIN Price",
     "winVAULT": "WIN VAULT",
-
-    "title1": "Risk Free Value Of Treasury 1 Assets"
+    "title1": "Risk Free Value Of Treasury 1 Assets",
+    "title2": "Market Value Of Treasury 2 Assets",
+    "title3": "Total Deposited Of PEX",
+    "title4": "Protocol Owned Liquidity PEX-ETH"
   },
   "stake": {
     "StakeTime": "Stake Time",
