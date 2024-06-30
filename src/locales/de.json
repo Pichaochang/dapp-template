@@ -8,7 +8,98 @@
     "WINReward": "Gewinnen Sie Belohnung",
     "DAOReward": "Dao Belohnung",
     "IDORelease": "IDO -Veröffentlichung",
-    "Boardroom": "Sitzungssaal"
+    "Boardroom": "Sitzungssaal",
+    "ADDRESS": "ADRESSE",
+    "INVITATION": "Einladungscode:",
+    "Assets": "Vermögenswerte",
+    "Inviter": "Einladung"
   },
-  "global": { "Boardroom": "Sitzungssaal" }
+  "global": {
+    "Boardroom": "Sitzungssaal",
+    "copySuccess": "Erfolg kopieren",
+    "close": "Schließen",
+    "submit": "Einreichen",
+    "installWallet": "Bitte installieren Sie Brieftasche",
+    "confirm": "Bestätigen",
+    "days": "Tage"
+  },
+  "bind": {
+    "title": "Binden Sie den Einladungscode",
+    "wallet": "Brieftaschenadresse",
+    "code": "Einladungscode"
+  },
+  "dashBoard": {
+    "MarketCap": "Marktkapitalisierung",
+    "PEXPrice": "Pex Preis",
+    "BackingPerPEx": "Backing pro Pex",
+    "TotalMintin": "Total -Münzmenge an PEX",
+    "winPrice": "Gewinnpreis",
+    "winVAULT": "Gewinnen Sie Vault",
+    "title1": "Risikofreier Wert des Finanzministeriums 1 Vermögenswerte",
+    "title2": "Marktwert des Finanzministeriums 2 Vermögenswerte",
+    "title3": "Gesamtablagerung von Pex",
+    "title4": "Protokoll im Besitz von Liquidität Pex-Eth"
+  },
+  "stake": {
+    "StakeTime": "Pfahlzeit",
+    "totalRewardOfStake": "Totale Belohnung des Anteils",
+    "StakePrncipal": "Pfahl prncipal",
+    "NextRebaseReward": "Nächste Belohnung wieder aufzunehmen",
+    "SingleStake": "Einzelanteil (3,3)",
+    "APY": "Apy",
+    "TotalDeposited": "Total deponiert",
+    "CurrentIndex": "Aktueller Index",
+    "title": "Pex zum ersten Mal?",
+    "title2": "Bitte genehmigen Sie Phoenix, um Ihre PEX zu verwenden",
+    "StakeList": "Pfahlliste",
+    "UNSTAKE": "Ungehörig",
+    "STAKE": "EINSATZ",
+    "Approve": "Genehmigen",
+    "noStake": "Kein Stakatdatum ist avaierbar"
+  },
+  "bond": {
+    "THSPrice": "THS PREIS",
+    "TOTALPRICE": "Gesamtpreis",
+    "Bond": "Anleihe [1,1]",
+    "BondPix": "Bindung",
+    "TreasuryBalance": "Treasury Balance",
+    "PEXPrice": "Pex Preis",
+    "TotalDeposited": "Total deponiert",
+    "CurrentIndex": "Aktueller Index",
+    "title": "Pex zum ersten Mal?",
+    "title2": "Bitte genehmigen Sie Phoenix, um Ihre PEX zu verwenden",
+    "StakeList": "Pfahlliste",
+    "Approve": "Genehmigen",
+    "noStake": "Kein Stakatdatum ist avaierbar",
+    "APY": "Apy",
+    "PRICE": "PREIS",
+    "PurchaseQuantity": "Kaufmenge"
+  },
+  "claim": {
+    "claim": "BEANSPRUCHEN",
+    "yourBalcance": "Ihr Balken",
+    "ACCELERATE": "BESCHLEUNIGEN",
+    "DurationOfRelea": "Dauer des Relea",
+    "TotalAmountUnrelaased": "Gesamtbetrag unerziehlich",
+    "QuantityReceived": "Erhaltene Menge",
+    "TheNumberOfAvaiiable": "Die Anzahl der Avaiable",
+    "TheRemainin": "Die bleiben die unerhelen"
+  },
+  "Redeem": { "Redeem": "TILGEN" },
+  "dao": {
+    "NODETYPE": "Knotentyp",
+    "DAOReward": "Dao Belohnung",
+    "Primary": "Primär",
+    "Intermedidate": "Intermedidat",
+    "Senior": "Senior",
+    "Team1": "SPEX -Inkrement des Teams",
+    "Team2": "Wachstumsrate des Teams des Teams",
+    "DividendCycle": "Dividendenzyklus"
+  },
+  "ido": {
+    "index1": "IDO Teil 1 (65%)",
+    "index2": "IDO Teil 2 (35%)",
+    "QuantityReceived": "Erhaltene Menge",
+    "TotalAmountCanReceive": "Gesamtbetrag kann erhalten"
+  }
 }

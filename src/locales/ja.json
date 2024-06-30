@@ -8,7 +8,98 @@
     "WINReward": "報酬を獲得します",
     "DAOReward": "DAO報酬",
     "IDORelease": "IDOリリース",
-    "Boardroom": "会議室"
+    "Boardroom": "会議室",
+    "ADDRESS": "住所",
+    "INVITATION": "招待コード：",
+    "Assets": "資産",
+    "Inviter": "招待者"
   },
-  "global": { "Boardroom": "会議室" }
+  "global": {
+    "Boardroom": "会議室",
+    "copySuccess": "成功をコピーします",
+    "close": "近い",
+    "submit": "提出する",
+    "installWallet": "ウォレットを取り付けてください",
+    "confirm": "確認する",
+    "days": "日々"
+  },
+  "bind": {
+    "title": "招待状コードをバインドします",
+    "wallet": "ウォレットアドレス",
+    "code": "招待コード"
+  },
+  "dashBoard": {
+    "MarketCap": "時価総額",
+    "PEXPrice": "PEX価格",
+    "BackingPerPEx": "PEXごとのバッキング",
+    "TotalMintin": "PEXの総ミント量",
+    "winPrice": "価格を獲得します",
+    "winVAULT": "金庫を獲得します",
+    "title1": "財務省1資産のリスクのない価値",
+    "title2": "財務省2資産の市場価値",
+    "title3": "PEXの総堆積",
+    "title4": "プロトコル所有の流動性PEX-ETH"
+  },
+  "stake": {
+    "StakeTime": "ステークタイム",
+    "totalRewardOfStake": "株式の完全な報酬",
+    "StakePrncipal": "ステークprncipal",
+    "NextRebaseReward": "次のリベース報酬",
+    "SingleStake": "シングルステーク（3,3）",
+    "APY": "apy",
+    "TotalDeposited": "総堆積",
+    "CurrentIndex": "現在のインデックス",
+    "title": "初めてのステーキングペックス？",
+    "title2": "PEXを使用するには、Phoenixを承認してください",
+    "StakeList": "ステークリスト",
+    "UNSTAKE": "不ステーク",
+    "STAKE": "ステーク",
+    "Approve": "承認する",
+    "noStake": "ステーク日はアベイ可能ではありません"
+  },
+  "bond": {
+    "THSPrice": "価格",
+    "TOTALPRICE": "合計金額",
+    "Bond": "ボンド[1,1]",
+    "BondPix": "つなぐ",
+    "TreasuryBalance": "財務残高",
+    "PEXPrice": "PEX価格",
+    "TotalDeposited": "総堆積",
+    "CurrentIndex": "現在のインデックス",
+    "title": "初めてのステーキングペックス？",
+    "title2": "PEXを使用するには、Phoenixを承認してください",
+    "StakeList": "ステークリスト",
+    "Approve": "承認する",
+    "noStake": "ステーク日はアベイ可能ではありません",
+    "APY": "apy",
+    "PRICE": "価格",
+    "PurchaseQuantity": "購入数量"
+  },
+  "claim": {
+    "claim": "請求",
+    "yourBalcance": "あなたのバルカンス",
+    "ACCELERATE": "加速します",
+    "DurationOfRelea": "解放の期間",
+    "TotalAmountUnrelaased": "総量総額",
+    "QuantityReceived": "受け取った数量",
+    "TheNumberOfAvaiiable": "Avaiableの数",
+    "TheRemainin": "無関心に残っています"
+  },
+  "Redeem": { "Redeem": "償還" },
+  "dao": {
+    "NODETYPE": "ノードタイプ",
+    "DAOReward": "DAO報酬",
+    "Primary": "主要な",
+    "Intermedidate": "中間化",
+    "Senior": "シニア",
+    "Team1": "チームのSPEX増分",
+    "Team2": "チームのSPEX成長率",
+    "DividendCycle": "配当サイクル"
+  },
+  "ido": {
+    "index1": "IDOパート1（65％）",
+    "index2": "IDOパート2（35％）",
+    "QuantityReceived": "受け取った数量",
+    "TotalAmountCanReceive": "合計金額を受け取ることができます"
+  }
 }

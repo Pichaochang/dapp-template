@@ -8,7 +8,98 @@
     "WINReward": "WIN Reward",
     "DAOReward": "DAO Reward",
     "IDORelease": "IDO Release",
-    "Boardroom": "Boardroom"
+    "Boardroom": "Boardroom",
+    "ADDRESS": "ADDRESS",
+    "INVITATION": "Invitation Code:",
+    "Assets": "Assets",
+    "Inviter": "INVITER"
   },
-  "global": { "Boardroom": "Boardroom" }
+  "global": {
+    "Boardroom": "Boardroom",
+    "copySuccess": "copy success",
+    "close": "Close",
+    "submit": "Submit",
+    "installWallet": "Please install wallet",
+    "confirm": "Confirm",
+    "days": "days"
+  },
+  "bind": {
+    "title": "Bind Invitation Code",
+    "wallet": "Wallet Address",
+    "code": "Invitation Code"
+  },
+  "dashBoard": {
+    "MarketCap": "Market Cap",
+    "PEXPrice": "PEX Price",
+    "BackingPerPEx": "Backing per PEX",
+    "TotalMintin": "Total Minting Quantity Of PEX",
+    "winPrice": "WIN Price",
+    "winVAULT": "WIN VAULT",
+    "title1": "Risk Free Value Of Treasury 1 Assets",
+    "title2": "Market Value Of Treasury 2 Assets",
+    "title3": "Total Deposited Of PEX",
+    "title4": "Protocol Owned Liquidity PEX-ETH"
+  },
+  "stake": {
+    "StakeTime": "Stake Time",
+    "totalRewardOfStake": "Total Reward Of Stake",
+    "StakePrncipal": "Stake Prncipal",
+    "NextRebaseReward": "Next Rebase Reward",
+    "SingleStake": "Single Stake (3,3)",
+    "APY": "APY",
+    "TotalDeposited": "Total Deposited",
+    "CurrentIndex": "Current Index",
+    "title": "First time staking PEX?",
+    "title2": "Please approve PHOENIX to use your PEX",
+    "StakeList": "STAKE LIST",
+    "UNSTAKE": "UNSTAKE",
+    "STAKE": "STAKE",
+    "Approve": "Approve",
+    "noStake": "No stake date is avaiable"
+  },
+  "bond": {
+    "THSPrice": "THS PRICE",
+    "TOTALPRICE": "TOTAL PRICE",
+    "Bond": "Bond[1,1]",
+    "BondPix": "Bond",
+    "TreasuryBalance": "Treasury Balance",
+    "PEXPrice": "PEX Price",
+    "TotalDeposited": "Total Deposited",
+    "CurrentIndex": "Current Index",
+    "title": "First time staking PEX?",
+    "title2": "Please approve PHOENIX to use your PEX",
+    "StakeList": "STAKE LIST",
+    "Approve": "Approve",
+    "noStake": "No stake date is avaiable",
+    "APY": "APY",
+    "PRICE": "PRICE",
+    "PurchaseQuantity": "Purchase Quantity"
+  },
+  "claim": {
+    "claim": "CLAIM",
+    "yourBalcance": "Your Balcance",
+    "ACCELERATE": "ACCELERATE",
+    "DurationOfRelea": "Duration Of Relea",
+    "TotalAmountUnrelaased": "Total Amount Unrelaased",
+    "QuantityReceived": "Quantity Received",
+    "TheNumberOfAvaiiable": "The Number Of Avaiiable",
+    "TheRemainin": "The Remainin The Unrelaased"
+  },
+  "Redeem": { "Redeem": "REDEEM" },
+  "dao": {
+    "NODETYPE": "NODE TYPE",
+    "DAOReward": "DAO Reward",
+    "Primary": "Primary",
+    "Intermedidate": "Intermedidate",
+    "Senior": "Senior",
+    "Team1": "Team's sPEX increment",
+    "Team2": "Team's sPEX growth rate",
+    "DividendCycle": "Dividend Cycle"
+  },
+  "ido": {
+    "index1": "IDO Part 1 (65%)",
+    "index2": "IDO Part 2 (35%)",
+    "QuantityReceived": "Quantity Received",
+    "TotalAmountCanReceive": "Total Amount Can Receive"
+  }
 }

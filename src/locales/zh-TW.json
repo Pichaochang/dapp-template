@@ -8,7 +8,94 @@
     "WINReward": "贏得獎勵",
     "DAOReward": "dao獎勵",
     "IDORelease": "IDO版本",
-    "Boardroom": "會議室"
+    "Boardroom": "會議室",
+    "ADDRESS": "地址",
+    "INVITATION": "邀請代碼：",
+    "Assets": "資產",
+    "Inviter": "邀請人"
   },
-  "global": { "Boardroom": "會議室" }
+  "global": {
+    "Boardroom": "會議室",
+    "copySuccess": "複製成功",
+    "close": "關閉",
+    "submit": "提交",
+    "installWallet": "請安裝錢包",
+    "confirm": "確認",
+    "days": "天"
+  },
+  "bind": { "title": "綁定邀請代碼", "wallet": "錢包地址", "code": "邀請代碼" },
+  "dashBoard": {
+    "MarketCap": "市值",
+    "PEXPrice": "PEX價格",
+    "BackingPerPEx": "每個PEX的支持",
+    "TotalMintin": "PEX的總鑄造量",
+    "winPrice": "獲勝價格",
+    "winVAULT": "贏得金庫",
+    "title1": "財政部1資產的無風險價值",
+    "title2": "庫房2資產的市場價值",
+    "title3": "PEX的總沉積",
+    "title4": "協議擁有流動性PEX-ETH"
+  },
+  "stake": {
+    "StakeTime": "賭注時間",
+    "totalRewardOfStake": "股份的總獎勵",
+    "StakePrncipal": "賭注prncipal",
+    "NextRebaseReward": "下一個重新獎勵",
+    "SingleStake": "單股（3,3）",
+    "APY": "APY",
+    "TotalDeposited": "總沉積",
+    "CurrentIndex": "當前索引",
+    "title": "第一次放入PEX？",
+    "title2": "請批准鳳凰以使用您的PEX",
+    "StakeList": "利益列表",
+    "UNSTAKE": "刪除",
+    "STAKE": "賭注",
+    "Approve": "批准",
+    "noStake": "沒有賭注日期是可以避免的"
+  },
+  "bond": {
+    "THSPrice": "價格",
+    "TOTALPRICE": "總價",
+    "Bond": "債券[1,1]",
+    "BondPix": "紐帶",
+    "TreasuryBalance": "財政部餘額",
+    "PEXPrice": "PEX價格",
+    "TotalDeposited": "總沉積",
+    "CurrentIndex": "當前索引",
+    "title": "第一次放入PEX？",
+    "title2": "請批准鳳凰以使用您的PEX",
+    "StakeList": "利益列表",
+    "Approve": "批准",
+    "noStake": "沒有賭注日期是可以避免的",
+    "APY": "APY",
+    "PRICE": "價格",
+    "PurchaseQuantity": "購買數量"
+  },
+  "claim": {
+    "claim": "宣稱",
+    "yourBalcance": "你的平衡",
+    "ACCELERATE": "加速",
+    "DurationOfRelea": "放鬆的持續時間",
+    "TotalAmountUnrelaased": "總金額未添加",
+    "QuantityReceived": "收到數量",
+    "TheNumberOfAvaiiable": "可見的數量",
+    "TheRemainin": "剩下的"
+  },
+  "Redeem": { "Redeem": "贖回" },
+  "dao": {
+    "NODETYPE": "節點類型",
+    "DAOReward": "dao獎勵",
+    "Primary": "基本的",
+    "Intermedidate": "中間體",
+    "Senior": "高級的",
+    "Team1": "團隊的晶狀體增量",
+    "Team2": "團隊的SPEX增長率",
+    "DividendCycle": "股息週期"
+  },
+  "ido": {
+    "index1": "IDO第1部分（65％）",
+    "index2": "IDO第2部分（35％）",
+    "QuantityReceived": "收到數量",
+    "TotalAmountCanReceive": "總金額可以接收"
+  }
 }

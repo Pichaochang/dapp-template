@@ -8,7 +8,98 @@
     "WINReward": "보상을 받으십시오",
     "DAOReward": "다오 보상",
     "IDORelease": "IDO 릴리스",
-    "Boardroom": "회의실"
+    "Boardroom": "회의실",
+    "ADDRESS": "주소",
+    "INVITATION": "초대 코드:",
+    "Assets": "자산",
+    "Inviter": "초대자"
   },
-  "global": { "Boardroom": "회의실" }
+  "global": {
+    "Boardroom": "회의실",
+    "copySuccess": "성공",
+    "close": "닫다",
+    "submit": "제출하다",
+    "installWallet": "지갑을 설치하십시오",
+    "confirm": "확인하다",
+    "days": "날"
+  },
+  "bind": {
+    "title": "바인딩 초대장 코드",
+    "wallet": "지갑 주소",
+    "code": "초대 코드"
+  },
+  "dashBoard": {
+    "MarketCap": "시가 총액",
+    "PEXPrice": "PEX 가격",
+    "BackingPerPEx": "Pex 당 후원",
+    "TotalMintin": "PEX의 총 마이닝량",
+    "winPrice": "승리 가격",
+    "winVAULT": "금고 승리",
+    "title1": "재무부 1 자산의 위험이없는 가치",
+    "title2": "재무부 2 자산의 시장 가치",
+    "title3": "PEX의 총 예금",
+    "title4": "프로토콜 소유 유동성 PEX-ETH"
+  },
+  "stake": {
+    "StakeTime": "스테이크 시간",
+    "totalRewardOfStake": "스테이크의 총 보상",
+    "StakePrncipal": "스테이크 prncipal",
+    "NextRebaseReward": "다음 Rebase 보상",
+    "SingleStake": "단일 스테이크 (3,3)",
+    "APY": "Apy",
+    "TotalDeposited": "총 예금",
+    "CurrentIndex": "현재 색인",
+    "title": "Pex를 처음으로 스테이킹?",
+    "title2": "Pex를 사용하려면 Phoenix를 승인하십시오",
+    "StakeList": "스테이크 목록",
+    "UNSTAKE": "살펴 봅니다",
+    "STAKE": "말뚝",
+    "Approve": "승인하다",
+    "noStake": "스테이크 날짜는 유발할 수 없습니다"
+  },
+  "bond": {
+    "THSPrice": "가격",
+    "TOTALPRICE": "총 가격",
+    "Bond": "채권 [1,1]",
+    "BondPix": "노예",
+    "TreasuryBalance": "재무부 균형",
+    "PEXPrice": "PEX 가격",
+    "TotalDeposited": "총 예금",
+    "CurrentIndex": "현재 색인",
+    "title": "Pex를 처음으로 스테이킹?",
+    "title2": "Pex를 사용하려면 Phoenix를 승인하십시오",
+    "StakeList": "스테이크 목록",
+    "Approve": "승인하다",
+    "noStake": "스테이크 날짜는 유발할 수 없습니다",
+    "APY": "Apy",
+    "PRICE": "가격",
+    "PurchaseQuantity": "구매 수량"
+  },
+  "claim": {
+    "claim": "주장하다",
+    "yourBalcance": "당신의 Balcance",
+    "ACCELERATE": "가속",
+    "DurationOfRelea": "Relea의 기간",
+    "TotalAmountUnrelaased": "총 금액은 널리 사용됩니다",
+    "QuantityReceived": "받은 수량",
+    "TheNumberOfAvaiiable": "avaiiable의 수",
+    "TheRemainin": "남아있는 사람들은 unrela에 기반을 둔다"
+  },
+  "Redeem": { "Redeem": "상환하다" },
+  "dao": {
+    "NODETYPE": "노드 유형",
+    "DAOReward": "다오 보상",
+    "Primary": "주요한",
+    "Intermedidate": "중간체",
+    "Senior": "상위",
+    "Team1": "팀의 SPEX 증가",
+    "Team2": "팀의 SPEX 성장률",
+    "DividendCycle": "배당주기"
+  },
+  "ido": {
+    "index1": "IDO 1 부 (65%)",
+    "index2": "IDO 2 부 (35%)",
+    "QuantityReceived": "받은 수량",
+    "TotalAmountCanReceive": "총 금액은받을 수 있습니다"
+  }
 }
