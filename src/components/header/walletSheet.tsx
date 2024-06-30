@@ -102,7 +102,7 @@ export default observer(function walletSheet() {
                 </div>
               </div>
               <div className='flex items-center justify-between'>
-                <img className='h-4 w-4 mr-2' src={theme === 'dark' ? darkWalletListIcon : walletListIcon} alt="" />
+                {/* <img className='h-4 w-4 mr-2' src={theme === 'dark' ? darkWalletListIcon : walletListIcon} alt="" /> */}
                 <img className='h-4 w-4 mr-2' src={theme === 'dark' ? darkShareIcon : shareIcon} alt="" />
               </div>
             </div>
