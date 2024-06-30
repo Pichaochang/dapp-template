@@ -39,12 +39,9 @@ export default function ProfitDialog(props) {
       setOpen(val);
     }}>
       <DialogTrigger asChild>
-        <div className='flex'>
-          <Input className='mr-2 dark:border-none dark:bg-[#fff] dark:text-[#000]'></Input>
-          <LoadingButton size='my' variant="my" onClick={() => {
-            setOpen(true);
-          }} className=' shrink-0'>{t('Redeem.Redeem')}</LoadingButton>
-        </div>
+        <LoadingButton size='my' variant="my" onClick={() => {
+          setOpen(true);
+        }} className=' shrink-0'>{t('Redeem.Redeem')}</LoadingButton>
         {/* <LoadingButton size='my' variant="my" onClick={() => {
           setOpen(true);
         }} className='mt-2 shrink-0 text-xs'>{t('claim.ACCELERATE')}</LoadingButton> */}

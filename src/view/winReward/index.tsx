@@ -4,6 +4,7 @@ import { useStores } from '@/store';
 import { useTranslation } from 'react-i18next';
 import Redeem from './Redeem';
 import Claim from './claim';
+import { Input } from '@/components/ui/input';
 
 
 const WinReward = () => {
@@ -11,7 +12,7 @@ const WinReward = () => {
   const [list, setList] = useState([{}, {}]);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { globalStore } = useStores();
-
+  const [val, setVal] = useState('');
   return (
     
     <div>
@@ -42,7 +43,15 @@ const WinReward = () => {
       </div>
 
       <div className='bg-[#fff] dark:bg-[#1d1d1b] rounded-lg p-2 mt-3'>
-        <Redeem />
+        <div className='flex'>
+          <Input type='number' value={val}  onChange={ (e) => {
+            console.log('val', e.target.value, typeof e.target.value);
+            setVal(e.target.value);
+          }
+          } className='mr-2 dark:border-none dark:bg-[#fff] dark:text-[#000]'></Input>
+          <Redeem />
+
+        </div>
         <div className='flex justify-between items-center mt-3'>
           <span>{t('dashBoard.winPrice')}</span>
           <span>$1230</span>
