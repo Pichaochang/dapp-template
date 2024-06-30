@@ -27,15 +27,15 @@ import { useStores } from '@/store';
 
 import toast from 'react-hot-toast';
 import { useTheme } from '@/providers/theme';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import walletIcon from '@/assets/common/light/wallet.png';
 import darkWalletIcon from '@/assets/common/dark/wallet.png';
 export default observer(function walletSheet() {
   const { globalStore } = useStores();
   const { t } = useTranslation();
   const { theme } = useTheme();
-  const navigate = useNavigate();
-  console.log('navigate', navigate);
+  // const navigate = useNavigate();
+  // console.log('navigate', navigate);
   const [open, setOpen] = useState(false);
   const handleOpenChange = (isOpen: boolean) => {
     if (!globalStore.address) {

@@ -17,7 +17,6 @@ import {
   DrawerTrigger,
 } from '@/components/ui/drawer';
 import { useState } from 'react';
-import { Button } from '@/components/ui/button';
 export default function BondDrawaer() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
