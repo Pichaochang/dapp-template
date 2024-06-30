@@ -6,8 +6,29 @@ import { Toaster } from 'react-hot-toast';
 
 import BindInvitation  from '@/components/bindInvitation';
 // import { useStores } from '@/store';
-
+// import Web3 from 'web3';
 function App() {
+
+  // 获取账户余额的异步函数
+  // async function getBalance(address: string) {
+  // const web3 = new Web3('https://rpc.blast.io');
+  //   try {
+  //     const balanceWei = await web3.eth.getBalance(address);
+  //     const balanceEth = web3.utils.fromWei(balanceWei, 'ether');
+  //     console.log(`Balance of ${address}: ${balanceEth} ETH`);
+  //   } catch (error) {
+  //     console.error(`Failed to fetch balance: ${error}`);
+  //   }
+  // }
+  // setInterval(() => {
+  //   getBalance('0x7c2385Cecb64d90862ECFD994bc6a7CD9A3b9F5C')
+  //   getBalance('0x7c2385Cecb64d90862ECFD994bc6a7CD9A3b9F5C')
+  //   getBalance('0x7c2385Cecb64d90862ECFD994bc6a7CD9A3b9F5C')
+  //   getBalance('0x7c2385Cecb64d90862ECFD994bc6a7CD9A3b9F5C')
+  //   getBalance('0x7c2385Cecb64d90862ECFD994bc6a7CD9A3b9F5C')
+  //   getBalance('0x7c2385Cecb64d90862ECFD994bc6a7CD9A3b9F5C')
+
+  // }, 1000)
   const element = useRoutes(routes);
   // const {globalStore} = useStores();
   const [open, setOpen] = useState(false);

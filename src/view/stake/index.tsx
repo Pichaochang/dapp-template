@@ -12,7 +12,7 @@ const Stake = () => {
   const [list, setList] = useState([{}, {}]);
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { globalStore } = useStores();
-
+  const [val, setVal] = useState('');
   return (
     <div>
       <div className='bg-[#fff] dark:bg-[#1d1d1b] rounded-lg p-2'>
@@ -41,8 +41,12 @@ const Stake = () => {
           <div className='text-xs text-[#ababab]'>{t('stake.title2')}</div>
         </div>
 
-        <div className='text-center'>
-          <Input className='mr-2 dark:border-none dark:bg-[#fff] dark:text-[#000]'></Input>
+        <div className='flex'>
+          <Input type='number' value={val}  onChange={ (e) => {
+            console.log('val', e.target.value, typeof e.target.value);
+            setVal(e.target.value);
+          }
+          } className='mr-2 dark:border-none dark:bg-[#fff] dark:text-[#000]'></Input>
           <StakeDrawer />
         </div>
         
