@@ -1,4 +1,3 @@
-
 export const ERC20Abi = [
   {inputs: [], payable: false, stateMutability: 'nonpayable', type: 'constructor'},
   {
@@ -228,6 +227,128 @@ export const ERC20Abi = [
     payable: false,
     stateMutability: 'nonpayable',
     type: 'function'
+  }
+];
+export const RegisterdAbi = [
+  {
+    'type': 'function',
+    'name': 'initialize',
+    'inputs': [],
+    'outputs': [],
+    'stateMutability': 'nonpayable'
+  },
+  {
+    'type': 'function',
+    'name': 'owner',
+    'inputs': [],
+    'outputs': [
+      {
+        'name': '',
+        'type': 'address',
+        'internalType': 'address'
+      }
+    ],
+    'stateMutability': 'view'
+  },
+  {
+    'type': 'function',
+    'name': 'register',
+    'inputs': [
+      {
+        'name': 'referrer',
+        'type': 'address',
+        'internalType': 'address'
+      }
+    ],
+    'outputs': [],
+    'stateMutability': 'nonpayable'
+  },
+  {
+    'type': 'function',
+    'name': 'renounceOwnership',
+    'inputs': [],
+    'outputs': [],
+    'stateMutability': 'nonpayable'
+  },
+  {
+    'type': 'function',
+    'name': 'transferOwnership',
+    'inputs': [
+      {
+        'name': 'newOwner',
+        'type': 'address',
+        'internalType': 'address'
+      }
+    ],
+    'outputs': [],
+    'stateMutability': 'nonpayable'
+  },
+  {
+    'type': 'function',
+    'name': 'users',
+    'inputs': [
+      {
+        'name': '',
+        'type': 'address',
+        'internalType': 'address'
+      }
+    ],
+    'outputs': [
+      {
+        'name': 'referrer',
+        'type': 'address',
+        'internalType': 'address'
+      },
+      {
+        'name': 'level',
+        'type': 'uint256',
+        'internalType': 'uint256'
+      },
+      {
+        'name': 'isValueUser',
+        'type': 'bool',
+        'internalType': 'bool'
+      }
+    ],
+    'stateMutability': 'view'
+  },
+  {
+    'type': 'event',
+    'name': 'OwnershipTransferred',
+    'inputs': [
+      {
+        'name': 'previousOwner',
+        'type': 'address',
+        'indexed': true,
+        'internalType': 'address'
+      },
+      {
+        'name': 'newOwner',
+        'type': 'address',
+        'indexed': true,
+        'internalType': 'address'
+      }
+    ],
+    'anonymous': false
+  },
+  {
+    'type': 'event',
+    'name': 'Registered',
+    'inputs': [
+      {
+        'name': 'user',
+        'type': 'address',
+        'indexed': true,
+        'internalType': 'address'
+      },
+      {
+        'name': 'referrer',
+        'type': 'address',
+        'indexed': true,
+        'internalType': 'address'
+      }
+    ],
+    'anonymous': false
   }
 ];
 

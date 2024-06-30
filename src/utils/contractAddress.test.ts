@@ -6,6 +6,7 @@ export const winAddress = '0xbc177C7Fe73835E9a688dCBd82e4B1b6F624D7d8';
 export const usdbAddress = '0xbc177C7Fe73835E9a688dCBd82e4B1b6F624D7d8';
 export const lpAddress = '0xbc177C7Fe73835E9a688dCBd82e4B1b6F624D7d8';
 export const sbAddress = '0xbc177C7Fe73835E9a688dCBd82e4B1b6F624D7d8';
+export const registerAddress = '0xE35432846B46a89549a7A50aE75B60711c44A334';
 
 export const rpc = {
   id: 168587773,
@@ -19,6 +20,7 @@ const contractProdAddress = {
   usdbAddress,
   lpAddress,
   sbAddress,
+  registerAddress,
   rpc
 };
 
