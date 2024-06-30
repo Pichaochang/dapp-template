@@ -5,6 +5,8 @@ import { useTranslation } from 'react-i18next';
 // import { Label } from "@/components/ui/label"
 import { globalVaild } from '@/utils/commonSdk';
 import { formatAddress } from '@/utils/utils';
+import {observer} from 'mobx-react-lite';
+
 import {
   Sheet,
   SheetContent,
@@ -28,7 +30,7 @@ import { useTheme } from '@/providers/theme';
 import { useNavigate } from 'react-router-dom';
 import walletIcon from '@/assets/common/light/wallet.png';
 import darkWalletIcon from '@/assets/common/dark/wallet.png';
-export default function walletSheet() {
+export default observer(function walletSheet() {
   const { globalStore } = useStores();
   const { t } = useTranslation();
   const { theme } = useTheme();
@@ -36,7 +38,11 @@ export default function walletSheet() {
   console.log('navigate', navigate);
   const [open, setOpen] = useState(false);
   const handleOpenChange = (isOpen: boolean) => {
-    setOpen(isOpen);
+    if (!globalStore.address) {
+      return;
+    } else {
+      setOpen(isOpen);
+    }
   };
   const openWallet =  async () => {
     if (!globalStore.address) {
@@ -45,6 +51,9 @@ export default function walletSheet() {
       setOpen(true);
     }
   };
+  React.useEffect(() => {
+    globalVaild();
+  }, []);
   return (
     <Sheet open={open} onOpenChange={handleOpenChange}>
       <SheetTrigger asChild>
@@ -123,4 +132,4 @@ export default function walletSheet() {
       </SheetContent>
     </Sheet>
   );
-}
+});

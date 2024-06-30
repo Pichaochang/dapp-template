@@ -20,6 +20,7 @@ import { useNavigate } from 'react-router-dom';
 import walletIcon from '@/assets/common/light/wallet.png';
 import darkWalletIcon from '@/assets/common/dark/wallet.png';
 import { useState } from 'react';
+import { globalStore } from '@/store';
 export default function WalletDrawer() {
   const { t } = useTranslation();
   const { theme } = useTheme();
@@ -29,7 +30,11 @@ export default function WalletDrawer() {
   };
   const [open, setOpen] = useState(false);
   const handleOpenChange = (isOpen) => {
-    setOpen(isOpen);
+    if (!globalStore.address) {
+      return;
+    } else {
+      setOpen(isOpen);
+    }
   };
   return (
     <DropdownMenu open={open} onOpenChange={handleOpenChange}>
