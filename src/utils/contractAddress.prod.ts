@@ -8,9 +8,9 @@ export const lpAddress = '0xbc177C7Fe73835E9a688dCBd82e4B1b6F624D7d8';
 export const sbAddress = '0xbc177C7Fe73835E9a688dCBd82e4B1b6F624D7d8';
 
 export const rpc = {
-  id: 97,
-  chainId: '0x61',
-  rpcUrl: 'https://bsc-testnet-rpc.publicnode.com'
+  id: 81457,
+  chainId: '0x13e31',
+  rpcUrl: 'https://rpc.blast.io'
 };
 const contractProdAddress = {
   pexAddress,

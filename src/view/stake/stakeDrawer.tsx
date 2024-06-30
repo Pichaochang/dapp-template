@@ -30,12 +30,9 @@ export default function BondDrawaer() {
       setOpen(val);
     }}>
       <DrawerTrigger asChild>
-        <div className='flex'>
-          <Input className='mr-2 dark:border-none dark:bg-[#fff] dark:text-[#000]'></Input>
-          <LoadingButton size='my' variant="my" onClick={() => {
-            setOpen(true);
-          }} className=' shrink-0'>{t('stake.STAKE')}</LoadingButton>
-        </div>
+        <LoadingButton size='my' variant="my" onClick={() => {
+          setOpen(true);
+        }} className=' shrink-0'>{t('stake.STAKE')}</LoadingButton>     
       </DrawerTrigger>
       <DrawerContent className="dark:border-none">
         <div className="mx-auto w-full max-w-sm">

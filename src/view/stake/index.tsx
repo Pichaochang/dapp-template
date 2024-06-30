@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import StakeDrawer from './stakeDrawer';
 import UnStakeDrawer from './unStakeDrawer';
 import { LoadingButton } from '@/components/ui/loadingButton';
+import { Input } from '@/components/ui/input';
 
 const Stake = () => {
   const { t } = useTranslation();
@@ -41,6 +42,7 @@ const Stake = () => {
         </div>
 
         <div className='text-center'>
+          <Input className='mr-2 dark:border-none dark:bg-[#fff] dark:text-[#000]'></Input>
           <StakeDrawer />
         </div>
         
