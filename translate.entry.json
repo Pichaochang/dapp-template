@@ -1,5 +1,6 @@
 {
   "bind": {
+    "bindErr":"I cannot bind myself",
     "title": "Bind Invitation Code",
     "wallet": "Wallet Address",
     "code": "Invitation Code"
@@ -68,6 +69,7 @@
     "PurchaseQuantity": "Purchase Quantity"
   },
   "global": {
+    "loginP": "Please login",
     "Boardroom": "Boardroom",
     "copySuccess": "copy success",
     "close": "Close",

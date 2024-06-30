@@ -18,6 +18,8 @@ import {
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { useTranslation } from 'react-i18next';
+import { registerUser } from '@/utils/commonSdk';
+import toast from 'react-hot-toast';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default observer(function DialogCloseButton(props:any) {
@@ -27,18 +29,27 @@ export default observer(function DialogCloseButton(props:any) {
   const { t } = useTranslation();
   const {globalStore} = useStores();
   const handleOpenChange = (bol:boolean) => {
-    setOpen(bol);
+    if (loading) {
+      return;
+    } else {
+      setOpen(bol);
+    }
   };
   const hanldeClick = async () => {
-    setLoading(true);
-    setTimeout(() => {
+    try {
+      setLoading(true);
+      const traction =  await registerUser(props.recAddress).catch(() => {
+        setLoading(false);
+      });
+      if (traction?.trac) {
+        setOpen(false);
+      }
       setLoading(false);
-      setOpen(false);
-    }, 3000);
+    } catch (error) {
+      setLoading(false);
+      toast.error(error?.message || String(error));
+    }
   };
-  useEffect(() => {
-    // setOpen(true);
-  }, []);
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       {/* <DialogTrigger asChild>
@@ -68,7 +79,7 @@ export default observer(function DialogCloseButton(props:any) {
               {t('bind.code')}
             </DialogDescription>
             <Input
-              defaultValue={globalStore.userInfo.code}
+              defaultValue={props.recAddress}
               readOnly
               className='border-none'
             />

@@ -39,6 +39,29 @@ const getWeb3 = async () => {
     }
   };
 };
+const getGas = async (contractFn:any) => {
+  const obj = await getWeb3();
+  if (!obj) {
+    return  Promise.resolve(false);
+  }
+  const {web3, common}:any  = obj;
+  // 获取gasPrice
+  const gasPrice:any = await web3.eth.getGasPrice();
+  // 获取gas
+  try {
+    const gasBase = await contractFn.estimateGas({ gasPrice, ...common, });
+    const gas = getGasBase(gasBase);
+    console.log('gas-gasPrice', gas, gasPrice);
+    return Promise.resolve({
+      gas,
+      gasPrice,
+      ...common
+    });
+  } catch (error) {
+    toast.error(error?.message || String(error));
+    return Promise.resolve(false);
+  }
+};
 export const getUserInfo  = async () => {
   const web3 = new Web3(window.ethereum);
   const getAccounts = await web3.eth.getAccounts();
@@ -47,24 +70,43 @@ export const getUserInfo  = async () => {
     return Promise.resolve(false);
   }
   const myContract = new web3.eth.Contract(RegisterdAbi, registerAddress);
-  const functionCall = await myContract.methods.users(account).call();
-  console.log('functionCall', functionCall);
-  // const functionCall2 = await myContract.methods.register('0x0d69b94c2bF61742d94f6a4cc4254B0037A506cF').send({from: account});
-  // console.log('functionCall2', functionCall2);
-
+  const {isValueUser, level, referrer}:any = await myContract.methods.users(account).call();
+  globalStore.setUserInfo({
+    isValueUser, level, referrer
+  });
+  console.log(isValueUser, level, referrer);
+  return Promise.resolve({
+    isValueUser, level, referrer
+  });
+  // 0x0000000000000000000000000000000000000000
 };
 const getGasBase = (num:any) => {
   return String(BigInt(num) * 110n / 100n);
 };
-const registerUser =  async () => {
+export const registerUser =  async (address:any) => {
   const obj = await getWeb3();
   if (!obj) {
     return  Promise.resolve(false);
   }
-  // const {web3, common, account}  = obj;
-  // const myContract = new web3.eth.Contract(RegisterdAbi, registerAddress);
-  // const contract = await myContract.methods.register('0x0d69b94c2bF61742d94f6a4cc4254B0037A506cF').send({from: account});
-  // console.log('functionCall2', functionCall2);
+  const {web3, account}:any  = obj;
+  const gasPrice:any = await web3.eth.getGasPrice();
+  const registerContract = new web3.eth.Contract(RegisterdAbi, registerAddress);
+  if (account == address) {
+    toast.error(t('bind.bindErr'));
+    return Promise.resolve(false);
+  }
+  const registerFn = await registerContract.methods.register(address);
+  const gasObj = await getGas(registerFn);
+  if (!gasObj) {
+    return Promise.resolve(false);
+  }
+  const transaction = await registerFn.send(gasObj);
+  console.log('transactionHash', transaction);
+  if (transaction.transactionHash) {
+    return Promise.resolve(transaction);
+  } else {
+    return Promise.resolve(false);
+  }
 };
 
 export const loginWallet = async () => {
@@ -72,13 +114,27 @@ export const loginWallet = async () => {
   const address = accounts[0];
   globalStore.setAddress(address);
   console.log('accounts', accounts, address);
-  getUserInfo();
+  const res = await getUserInfo();
+  if (res) {
+    const { isValueUser, level, referrer }:any = res;
+    return Promise.resolve({isValueUser, level, referrer});
+  }
 };
 // 前置检验
 export const globalVaild = async () => {
   if(!window?.ethereum) {
     toast.error(t('global.installWallet'));
     return Promise.resolve(false);
+  }
+  const web3 = new Web3(window.ethereum);
+
+  const network = await web3.eth.getChainId();
+  console.log('network', network);
+  if (network != BigInt(rpc.id)) {
+    await window.ethereum.request({
+      method: 'wallet_switchEthereumChain',
+      params: [{chainId: rpc.chainId}]
+    });
   }
   if (!globalStore.address) {
     try {
@@ -88,7 +144,7 @@ export const globalVaild = async () => {
     }
     return Promise.resolve(false);
   }
-  getUserInfo();
+  // getUserInfo();
 //   const provider = new ethers.providers.Web3Provider(window.ethereum);
 //   const signer = provider.getSigner();
 //   const contract = new ethers.Contract(chainInfo.value.ModeAddress, abi, signer);

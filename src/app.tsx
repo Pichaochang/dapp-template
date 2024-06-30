@@ -3,11 +3,14 @@ import routes from './router';
 import { useRoutes } from 'react-router-dom';
 // import { Toaster } from '@/components/ui/toaster'
 import { Toaster } from 'react-hot-toast';
+import { globalVaild, registerUser } from '@/utils/commonSdk';
 
 import BindInvitation  from '@/components/bindInvitation';
+import { getQueryVariable } from './utils/utils';
 // import { useStores } from '@/store';
 // import Web3 from 'web3';
 function App() {
+  const [recAddress] = useState(String(getQueryVariable('address') || ''));
 
   // 获取账户余额的异步函数
   // async function getBalance(address: string) {
@@ -29,12 +32,23 @@ function App() {
   //   getBalance('0x7c2385Cecb64d90862ECFD994bc6a7CD9A3b9F5C')
 
   // }, 1000)
+  
   const element = useRoutes(routes);
   // const {globalStore} = useStores();
   const [open, setOpen] = useState(false);
+  const bindFn = async () => {
+    await globalVaild();
+    if (recAddress) {
+      console.log('recAddress', recAddress);
+      setOpen(true);
+    }
+  };
+  React.useEffect(() => {
+    bindFn();
+  }, []);
   return (
     <div className='bg-[#f4f4f4] dark:bg-[#0f0f0f] min-h-screen overflow-y-auto overflow-x-hidden'>
-      <BindInvitation open={open} setOpen={setOpen}></BindInvitation>
+      <BindInvitation open={open} setOpen={setOpen} recAddress={recAddress}></BindInvitation>
       <div className='p-3 pt-0'>
         {element}
       </div>

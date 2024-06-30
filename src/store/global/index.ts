@@ -15,16 +15,9 @@ class Global {
   token = null;
   signtrue = null;
   userInfo: any = {
-    code: null,
-    id: 0,
-    address: '',
-    leaderAddress: '',
-    dreamBalance: '',
-    dreamEqUsdtBalance: '',
-    totalPrice: '',
-    hourlyEarnings: '',
-    createTime: '',
-    updateTime: ''
+    isValueUser: null, 
+    level: null, 
+    referrer: null
   };
   setUserInfo = (userInfo: any) => {
     this.userInfo = userInfo;

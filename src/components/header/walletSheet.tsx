@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 // import { Button } from '@/components/ui/button';
 // import { Input } from '@/components/ui/input';
 // import { Label } from "@/components/ui/label"
-import { globalVaild } from '@/utils/commonSdk';
+import { globalVaild, registerUser } from '@/utils/commonSdk';
 import { formatAddress } from '@/utils/utils';
 import {observer} from 'mobx-react-lite';
 
@@ -51,9 +51,16 @@ export default observer(function walletSheet() {
       setOpen(true);
     }
   };
-  React.useEffect(() => {
-    globalVaild();
-  }, []);
+  // const bindFn = async () => {
+  //   await globalVaild();
+  //   const xx = true;
+  //   if (xx) {
+  //     await registerUser(xx);
+  //   }
+  // };
+  // React.useEffect(() => {
+  //   bindFn();
+  // }, []);
   return (
     <Sheet open={open} onOpenChange={handleOpenChange}>
       <SheetTrigger asChild>
@@ -71,7 +78,11 @@ export default observer(function walletSheet() {
             <div className='flex items-center justify-between text-xs  text-[#ababab] dark:text-[#2a2a28]'>
               <span className='dark:text-[#585857]'>{formatAddress(globalStore.address, 8, 8)}</span>
               <img onClick={() => {
-                copy('2121');
+                if (!globalStore.address) {
+                  toast.error(t('global.loginP'));
+                  return;
+                }
+                copy(globalStore.address);
                 toast.success(t('global.copySuccess'));
               }} className='h-4 w-4 mr-2' src={theme === 'dark' ? darkCopyIcon : copyIcon} alt="" />
             </div>
@@ -81,7 +92,12 @@ export default observer(function walletSheet() {
             <div className='flex items-center justify-between text-xs  text-[#ababab] dark:text-[#2a2a28]'>
               <span className='dark:text-[#585857]'>{t('header.INVITATION')}</span>
               <img onClick={() => {
-                copy('2121');
+                if (!globalStore.address) {
+                  toast.error(t('global.loginP'));
+                  return;
+                }
+                const copyStr = `${window.location.origin}/DashBoard?address=${globalStore.address}`;
+                copy(copyStr);
                 toast.success(t('global.copySuccess'));
               }} className='h-4 w-4 mr-2' src={theme === 'dark' ? darkCopyIcon : copyIcon} alt="" />
             </div>
