@@ -79,7 +79,7 @@ export const fn = async () => {
     } else {
       return Promise.resolve(false);
     }
-  } catch (err) {
+  } catch (err:any) {
     console.log('err', err?.message);
     return Promise.resolve(false);
   }
