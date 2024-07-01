@@ -18,6 +18,7 @@
     "build:prod": "tsc && vite build --mode product",
     "build": "vite build --mode product",
     "bd": "vite build --mode dev",
+    "dd": "vite build --mode dev && python3 upload.py dev",
     "preview": "vite preview",
     "lint": "eslint --ext ts --ext tsx ./src",
     "lint:fix": "eslint --ext ts --ext tsx ./src --fix",
