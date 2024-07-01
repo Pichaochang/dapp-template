@@ -76,7 +76,8 @@
     "submit": "Submit",
     "installWallet": "Please install wallet",
     "confirm": "Confirm",
-    "days": "days"
+    "days": "days",
+    "swtichChain": "Please swtich blast Chain"
   },
   "claim": {
     "claim": "CLAIM",

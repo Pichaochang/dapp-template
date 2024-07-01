@@ -21,12 +21,15 @@
     "submit": "Submit",
     "installWallet": "Please install wallet",
     "confirm": "Confirm",
-    "days": "days"
+    "days": "days",
+    "loginP": "Please login",
+    "swtichChain": "Please swtich blast Chain"
   },
   "bind": {
     "title": "Bind Invitation Code",
     "wallet": "Wallet Address",
-    "code": "Invitation Code"
+    "code": "Invitation Code",
+    "bindErr": "I cannot bind myself"
   },
   "dashBoard": {
     "MarketCap": "Market Cap",

@@ -54,20 +54,6 @@ const DashBoard = () => {
             <span></span>
           </div>
           <div className='bg-[#EEEEEE] h-40 w-full rounded-sm mt-2'>
-            {/* <ChartComponent></ChartComponent> */}
-          </div>
-          
-        </div>
-      </div>
-
-      <div className='bg-[#fff] dark:bg-[#1d1d1b] rounded-lg p-2 mt-3'>
-        <div className=''>
-          <div className='text-[#AF27DF] text-md'>{t('dashBoard.title1')}</div>
-          <div className='text-xs text-[#ababab] dark:text-[#939393]'>
-            <span>$ 888,888.8888</span>
-            <span></span>
-          </div>
-          <div className='bg-[#EEEEEE] h-40 w-full rounded-sm mt-2'>
             <ChartComponent1></ChartComponent1>
           </div>
         </div>

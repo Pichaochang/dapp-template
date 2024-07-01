@@ -21,12 +21,15 @@
     "submit": "제출하다",
     "installWallet": "지갑을 설치하십시오",
     "confirm": "확인하다",
-    "days": "날"
+    "days": "날",
+    "loginP": "로그인 해주세요",
+    "swtichChain": "Swtich Blast 체인을주세요"
   },
   "bind": {
     "title": "바인딩 초대장 코드",
     "wallet": "지갑 주소",
-    "code": "초대 코드"
+    "code": "초대 코드",
+    "bindErr": "나는 나 자신을 묶을 수 없다"
   },
   "dashBoard": {
     "MarketCap": "시가 총액",

@@ -21,12 +21,15 @@
     "submit": "提出する",
     "installWallet": "ウォレットを取り付けてください",
     "confirm": "確認する",
-    "days": "日々"
+    "days": "日々",
+    "loginP": "ログインしてください",
+    "swtichChain": "Swtich Blastチェーンをお願いします"
   },
   "bind": {
     "title": "招待状コードをバインドします",
     "wallet": "ウォレットアドレス",
-    "code": "招待コード"
+    "code": "招待コード",
+    "bindErr": "私は自分自身を縛ることができません"
   },
   "dashBoard": {
     "MarketCap": "時価総額",

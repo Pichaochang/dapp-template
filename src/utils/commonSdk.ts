@@ -104,6 +104,7 @@ export const globalVaild = async () => {
   const network = await web3.eth.getChainId();
   console.log('network', network);
   if (network != BigInt(rpc.id)) {
+    toast.error(t('global.swtichChain'));
     await window.ethereum.request({
       method: 'wallet_switchEthereumChain',
       params: [{chainId: rpc.chainId}]
