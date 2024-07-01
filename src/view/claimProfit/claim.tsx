@@ -12,7 +12,7 @@ import { LoadingButton } from '@/components/ui/loadingButton';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 
-export default function Claim(props) {
+export default function Claim() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [btnLoading, setBtnLoading] = useState(false);

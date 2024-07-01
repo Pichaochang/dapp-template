@@ -7,7 +7,7 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import svgr from "vite-plugin-svgr";
 
 import config from './_config';
-const pathResolve = (pathStr) => {
+const pathResolve = (pathStr:any) => {
   return path.resolve(__dirname, pathStr)
 }
 // https://vitejs.dev/config/

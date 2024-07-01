@@ -16,3 +16,4 @@ export const walletClient = createWalletClient({
   chain,
   transport: window?.ethereum ? custom(window?.ethereum) : http()
 });
+export const BaseUrl = isDevelopment ? '' : '';

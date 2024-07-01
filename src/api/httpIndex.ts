@@ -9,9 +9,9 @@ import axiosRetry from 'axios-retry';
 import {InternalAxiosRequestConfig, AxiosRequestConfig, AxiosResponse, AxiosError} from 'axios';
 const whiteRetry = new Set(['ECONNABORTED', undefined, 0]);
 // import {baseURL} from '@/utils/variable';
-// import i18n from 'i18next';
+import i18n from 'i18next';
 // import {Toast} from 'antd-mobile';
-import {globalStoreCopy} from '@/store';
+import {globalStore} from '@/store';
 
 // 创建 axios 请求实例
 const serviceAxios = axios.create({
@@ -48,8 +48,8 @@ serviceAxios.interceptors.request.use(
     const {url} = config;
     const {
       token,
-      i18n: {language}
-    } = globalStoreCopy;
+    } = globalStore;
+    const {language} = i18n;
     config.headers.language = language === 'zh-TW' ? 'hk' : 'en';
     console.log('token', token);
     if (url?.includes('/login')) {
