@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import routes from './router';
 import { useRoutes } from 'react-router-dom';
 // import { Toaster } from '@/components/ui/toaster'
 import { Toaster } from 'react-hot-toast';
-import { globalVaild, registerUser } from '@/utils/commonSdk';
+import { globalVaild } from '@/utils/commonSdk';
 
 import BindInvitation  from '@/components/bindInvitation';
 import { getQueryVariable } from './utils/utils';
@@ -43,9 +43,29 @@ function App() {
       setOpen(true);
     }
   };
-  React.useEffect(() => {
+  useEffect(() => {
     bindFn();
+    setTimeout(() => {
+      if (window?.ethereum) {
+        // 监听 MetaMask 的账户切换事件
+        window.ethereum.on('accountsChanged', (accounts: any) => {
+          console.log('accountsChanged', accounts);
+          globalVaild();
+          // user.account = accounts[0];
+          // user.name = formatWalletAddress(accounts[0]);
+          console.log('MetaMask account changed:', accounts[0]);
+        });
+
+        // 检查用户切换网络
+        window.ethereum.on('chainChanged', async (chainId: any) => {
+          console.log(chainId);
+          // loginFn();
+        });
+        // globalVaild();
+      }
+    });
   }, []);
+
   return (
     <div className='bg-[#f4f4f4] dark:bg-[#0f0f0f] min-h-screen overflow-y-auto overflow-x-hidden'>
       <BindInvitation open={open} setOpen={setOpen} recAddress={recAddress}></BindInvitation>
