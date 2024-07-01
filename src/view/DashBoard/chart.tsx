@@ -34,7 +34,7 @@ const data = [
     amt: 2500,
   },
   {
-    name: 'Page G',
+    name: 'Total',
     uv: 3490,
     pv: 4300,
     amt: 2100,
