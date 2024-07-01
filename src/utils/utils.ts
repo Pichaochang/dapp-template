@@ -13,6 +13,7 @@ export const getQueryVariable = function (variable: string) {
   return false;
 };
 export const formatAddress = (address: string, startNum = 3, endNum = 3) => {
+  if (!address) return '';
   return `${address.slice(0, startNum)}...${address.slice(address.length - endNum, address.length)}`;
 };
 export const getUUID = () => uuidv4();
