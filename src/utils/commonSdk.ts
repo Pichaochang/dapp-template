@@ -1,10 +1,9 @@
-import { RegisterdAbi } from './abi';
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { ethers } from 'ethers';
+import { RegisterdAbi } from './abi';
+// import { ethers } from 'ethers';
 import { contractProdAddress, walletClient, publicClient } from  './variable';
 import { globalStore } from '@/store';
-import { ERC20Abi } from './abi';
 import { getUUID, getGasBase } from './utils';
 import toast from 'react-hot-toast';
 import i18n from '@/react-i18next-config';
@@ -72,13 +71,14 @@ export const getUserInfo  = async () => {
   }
   const myContract = new web3.eth.Contract(RegisterdAbi, registerAddress);
   const {isValueUser, level, referrer}:any = await myContract.methods.users(account).call();
+  const referrerTo =  ['0x0000000000000000000000000000000000000000'].includes(referrer) ? null : referrer;
   globalStore.setUserInfo({
-    isValueUser, level, referrer
+    isValueUser, level, referrer: referrerTo
   });
   console.log(isValueUser, level, referrer);
   return Promise.resolve({
     isValueUser, level, 
-    referrer: ['0x0000000000000000000000000000000000000000'].includes(referrer) ? null : referrer
+    referrer: referrerTo
   });
 };
 
@@ -115,8 +115,7 @@ export const loginWallet = async () => {
   console.log('accounts', accounts, address);
   const res = await getUserInfo();
   if (res) {
-    const { isValueUser, level, referrer }:any = res;
-    return Promise.resolve({isValueUser, level, referrer});
+    return Promise.resolve(res);
   }
 };
 // 前置检验

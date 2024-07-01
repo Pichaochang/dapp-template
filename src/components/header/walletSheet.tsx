@@ -129,8 +129,29 @@ export default observer(function walletSheet() {
 
           <div className='mt-3'>{t('header.Inviter')}</div>
           <div className="bg-[#F5F5F5] dark:bg-[#343432] rounded-md mt-2 p-2">
+            {/* <div className='flex items-center justify-between text-xs  text-[#ababab] dark:text-[#2a2a28]'>
+              <span className='dark:text-[#585857]'>{globalStore.userInfo.referrer}</span>
+              <div className='flex items-center justify-between text-xs  text-[#ababab] dark:text-[#2a2a28]'>
+                <span className='dark:text-[#585857]'>{formatAddress(globalStore.address, 8, 8)}</span>
+                <img onClick={() => {
+                  if (!globalStore.address) {
+                    toast.error(t('global.loginP'));
+                    return;
+                  }
+                  copy(globalStore.address);
+                  toast.success(t('global.copySuccess'));
+                }} className='h-4 w-4 mr-2' src={theme === 'dark' ? darkCopyIcon : copyIcon} alt="" />
+              </div>
+            </div> */}
             <div className='flex items-center justify-between text-xs  text-[#ababab] dark:text-[#2a2a28]'>
-              <span className='dark:text-[#585857]'>领导者地址</span>
+              <span className='dark:text-[#585857]'>{formatAddress(globalStore.userInfo.referrer, 8, 8)}</span>
+              <img onClick={() => {
+                if (!globalStore.userInfo.referrer) {
+                  return;
+                }
+                copy(globalStore.userInfo.referrer);
+                toast.success(t('global.copySuccess'));
+              }} className='h-4 w-4 mr-2' src={theme === 'dark' ? darkCopyIcon : copyIcon} alt="" />
             </div>
           </div>
         </div>
