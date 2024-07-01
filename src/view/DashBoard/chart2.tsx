@@ -57,6 +57,10 @@ export default class Example extends PureComponent {
             bottom: 0,
           }}
         >
+          <XAxis style={{fontSize: '10px'}} dataKey="name" tickLine={false} />
+          
+          <YAxis style={{fontSize: '7px'}} width={40} tickLine={false}/>
+
           {/* <XAxis dataKey="name" />
           <YAxis /> */}
           {/* <Tooltip /> */}

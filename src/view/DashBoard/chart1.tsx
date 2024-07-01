@@ -42,13 +42,17 @@ const data = [
 
 export default class Example extends PureComponent {
   static demoUrl = 'https://codesandbox.io/p/sandbox/simple-area-chart-4y9cnl';
-
+  
   render() {
+    const renderCustomAxisTick = (dd:any) => {
+      console.log(dd);
+      return (
+        <span>1</span>
+      );
+    };
     return (
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart
-          width={500}
-          height={400}
           data={data}
           margin={{
             top: 10,
@@ -57,8 +61,12 @@ export default class Example extends PureComponent {
             bottom: 0,
           }}
         >
-          {/* <XAxis dataKey="name" /> */}
-          {/* <YAxis /> */}
+          {/* label={renderCustomAxisTick} */}
+          <XAxis style={{fontSize: '10px'}} dataKey="name"  tickLine={false}/>
+          <YAxis style={{fontSize: '7px'}} width={40} tickLine={false}/>
+
+
+          {/* <YAxis style={{fontSize: '10px'}}  tickLine={false}/> */}
           {/* <Tooltip /> */}
           <Area type="monotone" dataKey="uv" stroke="#899bc4" fill="#899bc4" />
         </AreaChart>
