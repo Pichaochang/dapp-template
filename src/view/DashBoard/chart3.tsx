@@ -52,14 +52,14 @@ export default class Example extends PureComponent {
           data={data}
           margin={{
             top: 10,
-            right: 30,
+            right: 0,
             left: 0,
             bottom: 0,
           }}
         >
-          <XAxis dataKey="name" />
+          {/* <XAxis dataKey="name" />
           <YAxis />
-          <Tooltip />
+          <Tooltip /> */}
           <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
         </AreaChart>
       </ResponsiveContainer>

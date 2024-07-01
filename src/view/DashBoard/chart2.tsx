@@ -57,9 +57,9 @@ export default class Example extends PureComponent {
             bottom: 0,
           }}
         >
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
+          {/* <XAxis dataKey="name" />
+          <YAxis /> */}
+          {/* <Tooltip /> */}
           <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
         </AreaChart>
       </ResponsiveContainer>

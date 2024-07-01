@@ -61,7 +61,7 @@ export default class Example extends PureComponent {
           <XAxis dataKey="name" interval="preserveStartEnd"/>
           <YAxis ></YAxis>
 
-          <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
+          <Area type="monotone" dataKey="uv" stroke="#899bc4" fill="#899bc4" />
         </AreaChart>
       </ResponsiveContainer>
     );
