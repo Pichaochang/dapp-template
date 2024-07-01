@@ -20,9 +20,9 @@ export default defineConfig({
   plugins: [
     react(),
     svgr(),
-    partytownVite({
-      dest: path.join(__dirname, 'dist', '~partytown')
-    }),
+    // partytownVite({
+    //   dest: path.join(__dirname, 'dist', '~partytown')
+    // }),
     createSvgIconsPlugin({
       // 指定需要缓存的svg图标文件夹，即需要识别的svg都应该放在这个文件夹下
       // iconDirs: [path.resolve(process.cwd(), 'src/assets/svgs')],

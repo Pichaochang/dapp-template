@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import * as React from 'react';
 import {
   Select,
@@ -23,7 +24,7 @@ import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 
-export default function ProfitDialog(props) {
+export default function ProfitDialog() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [btnLoading, setBtnLoading] = useState(false);
