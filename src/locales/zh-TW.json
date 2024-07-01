@@ -2,11 +2,11 @@
   "header": {
     "wallet": "錢包",
     "Dashboard": "儀表板",
-    "Stake": "賭注",
-    "Bond": "紐帶",
+    "Stake": "質押",
+    "Bond": "分紅",
     "ClaimProfit": "要求利潤",
-    "WINReward": "贏得獎勵",
-    "DAOReward": "dao獎勵",
+    "WINReward": "WIN獎勵",
+    "DAOReward": "DAO獎勵",
     "IDORelease": "IDO版本",
     "Boardroom": "會議室",
     "ADDRESS": "地址",
@@ -23,21 +23,21 @@
     "confirm": "確認",
     "days": "天",
     "loginP": "請登錄",
-    "swtichChain": "請Swtich爆炸鏈"
+    "swtichChain": "請切換 Blast 鏈"
   },
   "bind": {
     "title": "綁定邀請代碼",
     "wallet": "錢包地址",
     "code": "邀請代碼",
-    "bindErr": "我不能束縛自己"
+    "bindErr": "我不能綁定自己"
   },
   "dashBoard": {
     "MarketCap": "市值",
     "PEXPrice": "PEX價格",
     "BackingPerPEx": "每個PEX的支持",
     "TotalMintin": "PEX的總鑄量",
-    "winPrice": "WIN 價格",
-    "winVAULT": "WIN 金庫",
+    "winPrice": "WIN價格",
+    "winVAULT": "WIN價值",
     "title1": "資產的無風險價值",
     "title2": "資產的市場價值",
     "title3": "PEX的存款總額",
@@ -58,22 +58,22 @@
     "UNSTAKE": "解質押",
     "STAKE": "質押",
     "Approve": "批准",
-    "noStake": "沒有質押日期是"
+    "noStake": "沒有質押日期"
   },
   "bond": {
     "THSPrice": "價格",
     "TOTALPRICE": "總價",
     "Bond": "債券[1,1]",
-    "BondPix": "紐帶",
+    "BondPix": "分紅",
     "TreasuryBalance": "財政部餘額",
     "PEXPrice": "PEX價格",
     "TotalDeposited": "總沉積",
     "CurrentIndex": "當前索引",
     "title": "第一次放入PEX？",
-    "title2": "請批准鳳凰以使用您的PEX",
-    "StakeList": "利益列表",
+    "title2": "請批准PHOENIX以使用您的PEX",
+    "StakeList": "質押列表",
     "Approve": "批准",
-    "noStake": "沒有賭注日期是可以避免的",
+    "noStake": "沒有質押日期",
     "APY": "APY",
     "PRICE": "價格",
     "PurchaseQuantity": "購買數量"
