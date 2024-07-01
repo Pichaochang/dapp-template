@@ -58,7 +58,7 @@ const getGas = async (contractFn:any) => {
       ...common
     });
   } catch (error:any) {
-    toast.error(error?.message || String(error));
+    toast.error(error?.data?.message || error?.message || String(error));
     return Promise.resolve(false);
   }
 };
@@ -88,7 +88,6 @@ export const registerUser =  async (address:any) => {
     return  Promise.resolve(false);
   }
   const {web3, account}:any  = obj;
-  const gasPrice:any = await web3.eth.getGasPrice();
   const registerContract = new web3.eth.Contract(RegisterdAbi, registerAddress);
   if (account == address) {
     toast.error(t('bind.bindErr'));
