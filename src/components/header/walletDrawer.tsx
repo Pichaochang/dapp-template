@@ -29,7 +29,7 @@ export default function WalletDrawer() {
     navigate(link);
   };
   const [open, setOpen] = useState(false);
-  const handleOpenChange = (isOpen) => {
+  const handleOpenChange = (isOpen:boolean) => {
     if (!globalStore.address) {
       return;
     } else {

@@ -45,7 +45,7 @@ export default observer(function DialogCloseButton(props:any) {
         setOpen(false);
       }
       setLoading(false);
-    } catch (error) {
+    } catch (error:any) {
       setLoading(false);
       toast.error(error?.message || String(error));
     }
