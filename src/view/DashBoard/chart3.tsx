@@ -58,7 +58,7 @@ export default class Example extends PureComponent {
           }}
         >
           <XAxis style={{fontSize: '10px'}} dataKey="name" tickLine={false}/>
-          <YAxis style={{fontSize: '7px'}} width={40} tickLine={false}/>
+          {/* <YAxis style={{fontSize: '7px'}} width={40} tickLine={false}/> */}
           <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
         </AreaChart>
       </ResponsiveContainer>

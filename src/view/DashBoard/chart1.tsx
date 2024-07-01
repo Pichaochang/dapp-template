@@ -63,7 +63,7 @@ export default class Example extends PureComponent {
         >
           {/* label={renderCustomAxisTick} */}
           <XAxis style={{fontSize: '10px'}} dataKey="name"  tickLine={false}/>
-          <YAxis style={{fontSize: '7px'}} width={40} tickLine={false}/>
+          {/* <YAxis style={{fontSize: '7px'}} width={40} tickLine={false}/> */}
 
 
           {/* <YAxis style={{fontSize: '10px'}}  tickLine={false}/> */}
