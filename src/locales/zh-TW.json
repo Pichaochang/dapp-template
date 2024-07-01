@@ -44,21 +44,21 @@
     "title4": "擁有的流動性PEX-ETH"
   },
   "stake": {
-    "StakeTime": "賭注時間",
+    "StakeTime": "質押時間",
     "totalRewardOfStake": "股份的總獎勵",
-    "StakePrncipal": "賭注prncipal",
+    "StakePrncipal": "質押 Prncipal",
     "NextRebaseReward": "下一個重新獎勵",
-    "SingleStake": "單（3,3）",
+    "SingleStake": "質押（3,3）",
     "APY": "APY",
     "TotalDeposited": "總質押額",
     "CurrentIndex": "我當前質押",
     "title": "第一次放入PEX？",
-    "title2": "請批准鳳凰以使用您的PEX",
-    "StakeList": "利益列表",
-    "UNSTAKE": "刪除",
-    "STAKE": "賭注",
+    "title2": "請批准PHOENIX使用您的PEX",
+    "StakeList": "質押列表",
+    "UNSTAKE": "解質押",
+    "STAKE": "質押",
     "Approve": "批准",
-    "noStake": "沒有賭注日期是可以避免的"
+    "noStake": "沒有質押日期是"
   },
   "bond": {
     "THSPrice": "價格",
