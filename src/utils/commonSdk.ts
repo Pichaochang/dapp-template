@@ -86,7 +86,7 @@ export const loginWallet = async () => {
   const accounts = await window.ethereum.request({method: 'eth_requestAccounts'});
   const address = accounts[0];
   globalStore.setAddress(address);
-  console.log('accounts', accounts, address);
+  console.log('accounts', address);
   const res = await getUserInfo();
   if (res) {
     return Promise.resolve(res);

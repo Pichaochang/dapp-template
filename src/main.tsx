@@ -3,9 +3,9 @@ import './styles/global.css';
 import { BrowserRouter } from 'react-router-dom';
 import RootProvider from './providers/root';
 import React from 'react';
-import './react-i18next-config'
+import './react-i18next-config';
 import { createRoot } from 'react-dom/client';
-import 'virtual:svg-icons-register'
+import 'virtual:svg-icons-register';
 
 
 import App from './app';
@@ -15,11 +15,11 @@ const container = document.querySelector('#root');
 const root = createRoot(container as HTMLElement);
 
 root.render(
-	<BrowserRouter>
-		<RootProvider>
-			<StoresProvider value={stores}>
-				<App />
-			</StoresProvider>
-		</RootProvider>
-	</BrowserRouter>
+  <BrowserRouter>
+    <RootProvider>
+      <StoresProvider value={stores}>
+        <App />
+      </StoresProvider>
+    </RootProvider>
+  </BrowserRouter>
 );

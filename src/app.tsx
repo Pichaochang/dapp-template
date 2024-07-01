@@ -51,6 +51,7 @@ function App() {
         window.ethereum.on('accountsChanged', (accounts: any) => {
           console.log('accountsChanged', accounts);
           loginWallet();
+          setOpen(false);
           // user.account = accounts[0];
           // user.name = formatWalletAddress(accounts[0]);
           console.log('MetaMask account changed:', accounts[0]);
