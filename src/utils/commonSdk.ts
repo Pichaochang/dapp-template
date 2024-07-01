@@ -93,7 +93,7 @@ export const loginWallet = async () => {
   }
   return Promise.resolve(false);
 };
-// 前置检验
+// 初始化前置检验
 export const globalVaild = async () => {
   if(!window?.ethereum) {
     toast.error(t('global.installWallet'));
@@ -108,6 +108,7 @@ export const globalVaild = async () => {
       method: 'wallet_switchEthereumChain',
       params: [{chainId: rpc.chainId}]
     });
+    return Promise.resolve(false);
   }
   if (!globalStore.address) {
     try {
@@ -117,10 +118,10 @@ export const globalVaild = async () => {
       toast.error(String(error));
       return Promise.resolve(false);
     }
+  } else {
+    return Promise.resolve(globalStore.userInfo);
   }
-  return Promise.resolve(false);
 };
-
 export const registerUser =  async (address:any) => {
   const obj = await getWeb3();
   if (!obj) {

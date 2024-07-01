@@ -60,11 +60,10 @@ function App() {
         // 检查用户切换网络
         window.ethereum.on('chainChanged', async (chainId: any) => {
           console.log(chainId);
-          // loginFn();
+          // globalVaild();
         });
-        // globalVaild();
       }
-    });
+    }, 1000);
   }, []);
 
   return (
