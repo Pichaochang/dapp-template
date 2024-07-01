@@ -1,3 +1,4 @@
+
 const OFF = 0; // "off" 或 0 - 关闭规则
 const WARN = 1; // "warn" 或 1 - 开启规则，使用警告级别的错误：warn (不会导致程序退出)
 // const ERROR = 2; // "error" 或 2 - 开启规则，使用错误级别的错误：error (当被触发的时候，程序会退出)
@@ -50,7 +51,11 @@ module.exports = {
       }
     ],
     '@typescript-eslint/no-var-requires': OFF, // 忽略没有导入声明模块
+    'react/prop-types': OFF,
+    'react-hooks/exhaustive-deps': OFF,
+    '@typescript-eslint/no-explicit-any': OFF,
+    '@typescript-eslint/no-unused-vars': OFF,
     'react-hooks/rules-of-hooks': OFF, // 检查 Hook 的规则
-    'react-hooks/exhaustive-deps': WARN // 检查 Effect 的依赖
+    // 'react-hooks/exhaustive-deps': WARN // 检查 Effect 的依赖
   }
 };
