@@ -4,7 +4,7 @@ import routes from './router';
 import { useRoutes } from 'react-router-dom';
 // import { Toaster } from '@/components/ui/toaster'
 import { Toaster } from 'react-hot-toast';
-import { globalVaild } from '@/utils/commonSdk';
+import { globalVaild, loginWallet } from '@/utils/commonSdk';
 
 import BindInvitation  from '@/components/bindInvitation';
 import { getQueryVariable } from './utils/utils';
@@ -50,7 +50,7 @@ function App() {
         // 监听 MetaMask 的账户切换事件
         window.ethereum.on('accountsChanged', (accounts: any) => {
           console.log('accountsChanged', accounts);
-          globalVaild();
+          loginWallet();
           // user.account = accounts[0];
           // user.name = formatWalletAddress(accounts[0]);
           console.log('MetaMask account changed:', accounts[0]);
