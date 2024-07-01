@@ -38,7 +38,7 @@ function App() {
   const [open, setOpen] = useState(false);
   const bindFn = async () => {
     const res:any = await globalVaild();
-    if (recAddress && res?.referrer) {
+    if (recAddress && !(res?.referrer)) {
       console.log('recAddress', recAddress);
       setOpen(true);
     }

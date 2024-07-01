@@ -50,7 +50,7 @@ export default observer(function walletSheet() {
   const openWallet =  async () => {
     if (!globalStore.address) {
       const res:any = await globalVaild();
-      if (recAddress && res?.referrer) {
+      if (recAddress && !(res?.referrer)) {
         console.log('recAddress', recAddress);
         setOpen(true);
       }
