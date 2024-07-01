@@ -90,7 +90,10 @@ export default observer(function walletSheet() {
 
           <div className="bg-[#F5F5F5] dark:bg-[#343432] rounded-md mt-2 p-2">
             <div className='flex items-center justify-between text-xs  text-[#ababab] dark:text-[#2a2a28]'>
-              <span className='dark:text-[#585857]'>{t('header.INVITATION')}</span>
+              <span className='dark:text-[#585857]'>
+                {t('header.INVITATION')}:
+                {globalStore.address ? `${formatAddress(`${window.location.origin}/DashBoard?address=${globalStore.address}`, 8, 8)}`: ''}
+              </span>
               <img onClick={() => {
                 if (!globalStore.address) {
                   toast.error(t('global.loginP'));
