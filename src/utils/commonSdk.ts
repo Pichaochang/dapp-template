@@ -82,6 +82,45 @@ export const getUserInfo  = async () => {
   });
 };
 
+export const loginWallet = async () => {
+  const accounts = await window.ethereum.request({method: 'eth_requestAccounts'});
+  const address = accounts[0];
+  globalStore.setAddress(address);
+  console.log('accounts', accounts, address);
+  const res = await getUserInfo();
+  if (res) {
+    return Promise.resolve(res);
+  }
+  return Promise.resolve(false);
+};
+// 前置检验
+export const globalVaild = async () => {
+  if(!window?.ethereum) {
+    toast.error(t('global.installWallet'));
+    return Promise.resolve(false);
+  }
+  const web3 = new Web3(window.ethereum);
+
+  const network = await web3.eth.getChainId();
+  console.log('network', network);
+  if (network != BigInt(rpc.id)) {
+    await window.ethereum.request({
+      method: 'wallet_switchEthereumChain',
+      params: [{chainId: rpc.chainId}]
+    });
+  }
+  if (!globalStore.address) {
+    try {
+      const res = await loginWallet();
+      return Promise.resolve(res);
+    } catch (error) {
+      toast.error(String(error));
+      return Promise.resolve(false);
+    }
+  }
+  return Promise.resolve(false);
+};
+
 export const registerUser =  async (address:any) => {
   const obj = await getWeb3();
   if (!obj) {
@@ -106,41 +145,3 @@ export const registerUser =  async (address:any) => {
     return Promise.resolve(false);
   }
 };
-
-export const loginWallet = async () => {
-  const accounts = await window.ethereum.request({method: 'eth_requestAccounts'});
-  const address = accounts[0];
-  globalStore.setAddress(address);
-  console.log('accounts', accounts, address);
-  const res = await getUserInfo();
-  if (res) {
-    return Promise.resolve(res);
-  }
-};
-// 前置检验
-export const globalVaild = async () => {
-  if(!window?.ethereum) {
-    toast.error(t('global.installWallet'));
-    return Promise.resolve(false);
-  }
-  const web3 = new Web3(window.ethereum);
-
-  const network = await web3.eth.getChainId();
-  console.log('network', network);
-  if (network != BigInt(rpc.id)) {
-    await window.ethereum.request({
-      method: 'wallet_switchEthereumChain',
-      params: [{chainId: rpc.chainId}]
-    });
-  }
-  if (!globalStore.address) {
-    try {
-      await loginWallet();
-    } catch (error) {
-      toast.error(String('error'));
-    }
-    return Promise.resolve(false);
-  }
-
-};
-

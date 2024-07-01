@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 // import { Button } from '@/components/ui/button';
@@ -6,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { globalVaild } from '@/utils/commonSdk';
 import { formatAddress } from '@/utils/utils';
 import {observer} from 'mobx-react-lite';
+import { getQueryVariable } from '@/utils/utils';
 
 import {
   Sheet,
@@ -31,6 +33,7 @@ import { useTheme } from '@/providers/theme';
 import walletIcon from '@/assets/common/light/wallet.png';
 import darkWalletIcon from '@/assets/common/dark/wallet.png';
 export default observer(function walletSheet() {
+  const [recAddress] = useState(String(getQueryVariable('address') || ''));
   const { globalStore } = useStores();
   const { t } = useTranslation();
   const { theme } = useTheme();
@@ -46,7 +49,11 @@ export default observer(function walletSheet() {
   };
   const openWallet =  async () => {
     if (!globalStore.address) {
-      await globalVaild();
+      const res:any = await globalVaild();
+      if (recAddress && res?.referrer) {
+        console.log('recAddress', recAddress);
+        setOpen(true);
+      }
     } else {
       setOpen(true);
     }

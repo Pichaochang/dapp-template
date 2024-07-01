@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState } from 'react';
 import routes from './router';
 import { useRoutes } from 'react-router-dom';
@@ -34,11 +35,10 @@ function App() {
   // }, 1000)
   
   const element = useRoutes(routes);
-  // const {globalStore} = useStores();
   const [open, setOpen] = useState(false);
   const bindFn = async () => {
-    await globalVaild();
-    if (recAddress) {
+    const res:any = await globalVaild();
+    if (recAddress && res?.referrer) {
       console.log('recAddress', recAddress);
       setOpen(true);
     }
