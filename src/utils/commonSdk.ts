@@ -123,6 +123,10 @@ export const globalVaild = async () => {
   }
 };
 export const registerUser =  async (address:any) => {
+  const vaild = await globalVaild();
+  if (!vaild) {
+    return  Promise.resolve(false);
+  }
   const obj = await getWeb3();
   if (!obj) {
     return  Promise.resolve(false);
