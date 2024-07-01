@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 // import { Button } from '@/components/ui/button';
 // import { Input } from '@/components/ui/input';
 // import { Label } from "@/components/ui/label"
-import { globalVaild, registerUser } from '@/utils/commonSdk';
+import { globalVaild } from '@/utils/commonSdk';
 import { formatAddress } from '@/utils/utils';
 import {observer} from 'mobx-react-lite';
 
@@ -16,8 +16,8 @@ import {
 import { useState } from 'react';
 import copyIcon from '@/assets/common/light/copy.png';
 import darkCopyIcon from '@/assets/common/dark/copy.png';
-import walletListIcon from '@/assets/common/light/walletList.png';
-import darkWalletListIcon from '@/assets/common/dark/walletList.png';
+// import walletListIcon from '@/assets/common/light/walletList.png';
+// import darkWalletListIcon from '@/assets/common/dark/walletList.png';
 import shareIcon from '@/assets/common/light/share.png';
 import darkShareIcon from '@/assets/common/dark/share.png';
 import favicon from '@/assets/common//favicon.png';
