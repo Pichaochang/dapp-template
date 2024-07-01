@@ -46,24 +46,27 @@ export default class Example extends PureComponent {
 
   render() {
     return (
-      <ResponsiveContainer width="100%" height="100%">
-        <AreaChart
-          width={200}
-          height={60}
-          data={data}
-          margin={{
-            top: 5,
-            right: 0,
-            left: 0,
-            bottom: 5,
-          }}
-        >
-          <XAxis dataKey="name" interval="preserveStartEnd"/>
-          <YAxis ></YAxis>
+      <div>
+        <div>4000</div>
+        <ResponsiveContainer width="100%" height="100%">
+          <AreaChart
+            width={200}
+            height={60}
+            data={data}
+            margin={{
+              top: 5,
+              right: 0,
+              left: 0,
+              bottom: 5,
+            }}
+          >
+            <XAxis dataKey="name" interval="preserveStartEnd"/>
+            <YAxis ></YAxis>
 
-          <Area type="monotone" dataKey="uv" stroke="#899bc4" fill="#899bc4" />
-        </AreaChart>
-      </ResponsiveContainer>
+            <Area type="monotone" dataKey="uv" stroke="#899bc4" fill="#899bc4" />
+          </AreaChart>
+        </ResponsiveContainer>
+      </div>
     );
   }
 }

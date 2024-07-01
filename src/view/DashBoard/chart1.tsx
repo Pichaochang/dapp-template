@@ -44,33 +44,34 @@ export default class Example extends PureComponent {
   static demoUrl = 'https://codesandbox.io/p/sandbox/simple-area-chart-4y9cnl';
   
   render() {
-    const renderCustomAxisTick = (dd:any) => {
-      console.log(dd);
-      return (
-        <span>1</span>
-      );
-    };
     return (
-      <ResponsiveContainer width="100%" height="100%">
-        <AreaChart
-          data={data}
-          margin={{
-            top: 10,
-            right: 0,
-            left: 0,
-            bottom: 0,
-          }}
-        >
-          {/* label={renderCustomAxisTick} */}
-          <XAxis style={{fontSize: '10px'}} dataKey="name"  tickLine={false}/>
-          {/* <YAxis style={{fontSize: '7px'}} width={40} tickLine={false}/> */}
+      <div className='bg-[#EEEEEE]  rounded-sm mt-2'>
+        <div className='text-xs'>4000</div>
+        
+        <div className='h-40 w-full'>
+          <ResponsiveContainer width="100%" height="100%">
+            <AreaChart
+              data={data}
+              margin={{
+                top: 10,
+                right: 0,
+                left: 0,
+                bottom: 0,
+              }}
+            >
+              {/* label={renderCustomAxisTick} */}
+              {/* <XAxis style={{fontSize: '10px'}} dataKey="name"  tickLine={false}/> */}
+              {/* <YAxis style={{fontSize: '7px'}} width={40} tickLine={false}/> */}
 
 
-          {/* <YAxis style={{fontSize: '10px'}}  tickLine={false}/> */}
-          {/* <Tooltip /> */}
-          <Area type="monotone" dataKey="uv" stroke="#899bc4" fill="#899bc4" />
-        </AreaChart>
-      </ResponsiveContainer>
+              {/* <YAxis style={{fontSize: '10px'}}  tickLine={false}/> */}
+              {/* <Tooltip /> */}
+              <Area type="monotone" dataKey="uv" stroke="#899bc4" fill="#899bc4" />
+            </AreaChart>
+          </ResponsiveContainer>
+        </div>
+        <div className='text-xs text-right'>total</div>
+      </div>
     );
   }
 }

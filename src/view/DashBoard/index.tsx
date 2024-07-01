@@ -53,9 +53,7 @@ const DashBoard = () => {
             <span>$ 888,888.8888</span>
             <span></span>
           </div>
-          <div className='bg-[#EEEEEE] h-40 w-full rounded-sm mt-2'>
-            <ChartComponent1></ChartComponent1>
-          </div>
+          <ChartComponent1></ChartComponent1>
         </div>
       </div>
 
@@ -66,9 +64,7 @@ const DashBoard = () => {
             <span>$ 888,888.8888</span>
             <span></span>
           </div>
-          <div className='bg-[#EEEEEE] h-40 w-full rounded-sm mt-2'>
-            <ChartComponent2></ChartComponent2>
-          </div>
+          <ChartComponent2></ChartComponent2>
         </div>
       </div>
 
@@ -80,9 +76,7 @@ const DashBoard = () => {
             <span>$ 888,888.8888</span>
             <span></span>
           </div>
-          <div className='bg-[#EEEEEE] h-40 w-full rounded-sm mt-2'>
-            <ChartComponent3></ChartComponent3>
-          </div>
+          <ChartComponent3></ChartComponent3>
         </div>
       </div>
 
@@ -94,9 +88,7 @@ const DashBoard = () => {
             <span>$ 888,888.8888</span>
             <span></span>
           </div>
-          <div className='bg-[#EEEEEE] h-40 w-full rounded-sm mt-2'>
-            <ChartComponent4></ChartComponent4>
-          </div>
+          <ChartComponent4></ChartComponent4>
         </div>
       </div>
     </div>
