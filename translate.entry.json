@@ -77,7 +77,8 @@
     "installWallet": "Please install wallet",
     "confirm": "Confirm",
     "days": "days",
-    "swtichChain": "Please swtich blast Chain"
+    "swtichChain": "Please swtich blast Chain",
+    "Today": "Today"
   },
   "claim": {
     "claim": "CLAIM",

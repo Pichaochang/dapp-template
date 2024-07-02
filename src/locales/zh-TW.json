@@ -23,7 +23,8 @@
     "confirm": "確認",
     "days": "天",
     "loginP": "請登錄",
-    "swtichChain": "請切換 Blast 鏈"
+    "swtichChain": "請切換 Blast 鏈",
+    "Today": "今天"
   },
   "bind": {
     "title": "綁定邀請代碼",

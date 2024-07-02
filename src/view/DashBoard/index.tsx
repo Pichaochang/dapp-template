@@ -50,7 +50,7 @@ const DashBoard = () => {
         <div className=''>
           <div className='text-[#AF27DF] text-md'>{t('dashBoard.title1')}</div>
           <div className='text-xs text-[#ababab] dark:text-[#939393]'>
-            <span>$ 888,888.8888</span>
+            <span>$ 888,888.8888 {t('global.Today')}</span>
             <span></span>
           </div>
           <ChartComponent1></ChartComponent1>
@@ -61,7 +61,7 @@ const DashBoard = () => {
         <div className=''>
           <div className='text-[#AF27DF] text-md'>{t('dashBoard.title2')}</div>
           <div className='text-xs text-[#ababab] dark:text-[#939393]'>
-            <span>$ 888,888.8888</span>
+            <span>$ 888,888.8888 {t('global.Today')}</span>
             <span></span>
           </div>
           <ChartComponent2></ChartComponent2>
@@ -73,7 +73,7 @@ const DashBoard = () => {
         <div className=''>
           <div className='text-[#AF27DF] text-md'>{t('dashBoard.title3')}</div>
           <div className='text-xs text-[#ababab] dark:text-[#939393]'>
-            <span>$ 888,888.8888</span>
+            <span>$ 888,888.8888 {t('global.Today')}</span>
             <span></span>
           </div>
           <ChartComponent3></ChartComponent3>
@@ -85,7 +85,7 @@ const DashBoard = () => {
         <div className=''>
           <div className='text-[#AF27DF] text-md'>{t('dashBoard.title4')}</div>
           <div className='text-xs text-[#ababab] dark:text-[#939393]'>
-            <span>$ 888,888.8888</span>
+            <span>$ 888,888.8888 {t('global.Today')}</span>
             <span></span>
           </div>
           <ChartComponent4></ChartComponent4>
