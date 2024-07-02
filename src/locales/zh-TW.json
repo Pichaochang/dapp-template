@@ -57,7 +57,7 @@
     "StakeList": "質押列表",
     "UNSTAKE": "解質押",
     "STAKE": "質押",
-    "Approve": "批准",
+    "Approve": "準予",
     "noStake": "沒有質押日期"
   },
   "bond": {
@@ -72,7 +72,7 @@
     "title": "第一次放入PEX？",
     "title2": "請批准PHOENIX以使用您的PEX",
     "StakeList": "質押列表",
-    "Approve": "批准",
+    "Approve": "準予",
     "noStake": "沒有質押日期",
     "APY": "APY",
     "PRICE": "價格",
