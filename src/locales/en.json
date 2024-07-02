@@ -23,7 +23,8 @@
     "confirm": "Confirm",
     "days": "days",
     "loginP": "Please login",
-    "swtichChain": "Please swtich blast Chain"
+    "swtichChain": "Please swtich blast Chain",
+    "Today": "Today"
   },
   "bind": {
     "title": "Bind Invitation Code",
