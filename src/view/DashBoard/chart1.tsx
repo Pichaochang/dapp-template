@@ -65,7 +65,7 @@ export default class Example extends PureComponent {
 
 
               {/* <YAxis style={{fontSize: '10px'}}  tickLine={false}/> */}
-              {/* <Tooltip /> */}
+              <Tooltip />
               <Area type="monotone" dataKey="uv" stroke="#899bc4" fill="#899bc4" />
             </AreaChart>
           </ResponsiveContainer>
